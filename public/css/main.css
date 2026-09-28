@@ -1,0 +1,394 @@
+/* Estilos Principais, Grid de Estantes e Responsividade */
+@import './variables.css';
+@import './components.css';
+
+/* Seções e Abas */
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Visão Geral & Estatísticas do Galpão */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  margin-bottom: 2rem;
+}
+
+.overview-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  box-shadow: var(--shadow-sm);
+  transition: all var(--transition-base);
+}
+
+.overview-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--card-border-hover, var(--border-focus));
+  box-shadow: var(--shadow-md);
+}
+
+.overview-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.overview-val {
+  font-size: 1.6rem;
+  font-weight: 800;
+  font-family: var(--font-heading);
+  color: var(--text-highlight);
+  line-height: 1.1;
+}
+
+.overview-desc {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* Visualizador de Prateleiras (Zona Verde) */
+.shelves-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.shelf-wing {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+}
+
+.shelf-wing-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border-subtle);
+}
+
+.shelf-wing-badge {
+  background: rgba(16, 185, 129, 0.2);
+  color: var(--color-prateleiras-light);
+  border: 1px solid var(--color-prateleiras);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.shelf-bays-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.shelf-bay-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition-base);
+}
+
+.shelf-bay-card:hover {
+  border-color: var(--color-prateleiras);
+  box-shadow: 0 0 15px var(--color-prateleiras-glow);
+}
+
+.shelf-bay-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-highlight);
+  display: flex;
+  justify-content: space-between;
+}
+
+/* 4 Níveis Físicos da Estante */
+.shelf-tiers-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  background: #0d1522;
+  padding: 0.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--border-subtle);
+}
+
+.shelf-tier {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.35rem 0.6rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border-left: 3px solid #64748b;
+}
+
+.shelf-tier.tier-4 { border-left-color: #d97706; background: rgba(217, 119, 6, 0.1); } /* Kraft Boxes */
+.shelf-tier.tier-3 { border-left-color: #3b82f6; background: rgba(59, 130, 246, 0.1); } /* Mecânica */
+.shelf-tier.tier-2 { border-left-color: #6366f1; background: rgba(99, 102, 241, 0.1); } /* Pesados */
+.shelf-tier.tier-1 { border-left-color: #eab308; background: rgba(234, 179, 8, 0.1); }  /* Bins Amarelos/Azuis */
+
+.shelf-progress-bar {
+  width: 100%;
+  height: 6px;
+  background: #1e293b;
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.shelf-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981, #34d399);
+  border-radius: var(--radius-full);
+}
+
+/* Monitor das Baias de Desmanche (Zona Laranja) */
+.dismantle-bays-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.bay-card {
+  background: var(--bg-surface);
+  border: 1px solid var(--border-default);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-md);
+  transition: all var(--transition-base);
+}
+
+.bay-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 6px;
+  height: 100%;
+  background: var(--color-desmanche);
+}
+
+.bay-card:hover {
+  border-color: var(--color-desmanche);
+  box-shadow: 0 0 20px var(--color-desmanche-glow);
+}
+
+.bay-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+}
+
+.bay-badge {
+  background: rgba(234, 88, 12, 0.2);
+  color: var(--color-desmanche-light);
+  border: 1px solid var(--color-desmanche);
+  padding: 0.3rem 0.75rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.vehicle-info-block {
+  margin-bottom: 1rem;
+}
+
+.vehicle-title {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: var(--text-highlight);
+  margin-bottom: 0.25rem;
+}
+
+.vehicle-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+.vehicle-detail-item {
+  background: var(--bg-card);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  border: 1px solid var(--border-subtle);
+}
+
+.fluid-checklist {
+  background: #0d1422;
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 0.85rem;
+  margin-bottom: 1.25rem;
+}
+
+.fluid-checklist-title {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fb923c;
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.fluid-items-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+}
+
+.fluid-item {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: var(--text-muted);
+}
+
+.fluid-item.checked {
+  color: #34d399;
+}
+
+/* Modais e Formulários */
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  margin-bottom: 0.35rem;
+}
+
+.form-control {
+  width: 100%;
+  background: var(--bg-input);
+  border: 1px solid var(--border-default);
+  color: var(--text-highlight);
+  padding: 0.65rem 0.85rem;
+  border-radius: var(--radius-md);
+  font-size: 0.9rem;
+  font-family: var(--font-main);
+  transition: all var(--transition-fast);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--border-focus);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+/* Toast Notifications */
+.toast-container {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  z-index: 2000;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.toast {
+  background: var(--bg-card);
+  border: 1px solid var(--border-default);
+  padding: 0.85rem 1.25rem;
+  border-radius: var(--radius-md);
+  color: white;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  animation: slideIn 0.3s ease;
+  min-width: 280px;
+}
+
+@keyframes slideIn {
+  from { transform: translateX(100%); opacity: 0; }
+  to { transform: translateX(0); opacity: 1; }
+}
+
+.toast.toast-success {
+  border-left: 4px solid var(--color-prateleiras);
+}
+
+.toast.toast-info {
+  border-left: 4px solid var(--color-balcao);
+}
+
+.toast.toast-warning {
+  border-left: 4px solid #f59e0b;
+}
+
+/* Estilos de Impressão */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  .printable-area, .printable-area * {
+    visibility: visible;
+  }
+  .printable-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 80mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+}
+
+/* Responsividade */
+@media (max-width: 1024px) {
+  .floorplan-viewer {
+    grid-template-columns: 1fr;
+  }
+  .shelves-container {
+    grid-template-columns: 1fr;
+  }
+  .scale-display-screen {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+}

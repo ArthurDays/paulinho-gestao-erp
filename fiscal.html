@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plataforma Fiscal - Gestor LC, Emissor NF-e & Emissor MDF-e</title>
+  <meta name="description" content="Finanças e documentos fiscais com agilidade e precisão. Gestor LC, Emissor NF-e integrado à SEFAZ e Emissor MDF-e com rastreamento de transporte.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@600;700;800&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    /* ==========================================================================
+       DESIGN SYSTEM - SUÍTE FISCAL MODERNA
+       Regras: Cards (border-radius: 12px), Títulos Laranja, Textos Preto,
+       Fundo Claro Limpo, Sombras Suaves, Ícones Vetoriais e Integração SEFAZ.
+       ========================================================================== */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    :root {
+      --bg-page: #f8fafc;
+      --bg-card: #ffffff;
+      --bg-subtle: #f1f5f9;
+      --bg-input: #ffffff;
+      
+      --text-main: #0f172a;
+      --text-secondary: #334155;
+      --text-muted: #64748b;
+      --text-light: #94a3b8;
+
+      /* Cores de Identidade Visual Solicitadas */
+      --color-orange-title: #ea580c;   /* Laranja Vibrante para títulos */
+      --color-orange-light: #ffedd5;
+      --color-orange-hover: #c2410c;
+      
+      --color-green-success: #16a34a; /* Verde da Transmissão Concluída */
+      --color-green-bg: #dcfce7;
+      --color-green-border: #86efac;
+
+      --color-sefaz-blue: #0284c7;    /* Azul Oficial SEFAZ */
+      --color-sefaz-bg: #e0f2fe;
+
+      --border-default: #e2e8f0;
+      --border-focus: #ea580c;
+
+      --shadow-card: 0 10px 25px -5px rgba(0, 0, 0, 0.05), 0 8px 10px -6px rgba(0, 0, 0, 0.03);
+      --shadow-hover: 0 20px 30px -10px rgba(0, 0, 0, 0.09), 0 10px 15px -5px rgba(0, 0, 0, 0.05);
+
+      --radius-card: 12px;
+      --radius-sm: 8px;
+      --radius-full: 9999px;
+
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-heading: 'Outfit', var(--font-sans);
+      --font-mono: 'Share Tech Mono', monospace;
+    }
+
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-page);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding-bottom: 4rem;
+    }
+
+    /* Barra Superior de Navegação Global */
+    .top-nav {
+      background: #ffffff;
+      border-bottom: 1px solid var(--border-default);
+      padding: 0.85rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .nav-brand-icon {
+      width: 38px;
+      height: 38px;
+      background: linear-gradient(135deg, #ea580c, #f97316);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-weight: 800;
+      font-size: 1.2rem;
+      box-shadow: 0 4px 10px rgba(234, 88, 12, 0.3);
+    }
+
+    .nav-brand-text {
+      font-family: var(--font-heading);
+      font-weight: 800;
+      font-size: 1.15rem;
+      letter-spacing: -0.5px;
+    }
+
+    .nav-brand-badge {
+      font-size: 0.7rem;
+      background: var(--bg-subtle);
+      color: var(--text-muted);
+      padding: 0.15rem 0.5rem;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      margin-left: 0.5rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .nav-link-btn {
+      text-decoration: none;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--text-secondary);
+      transition: color 0.15s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .nav-link-btn:hover {
+      color: var(--color-orange-title);
+    }
+
+    .nav-btn-back {
+      background: var(--bg-subtle);
+      color: var(--text-main);
+      padding: 0.45rem 1rem;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--border-default);
+      transition: all 0.2s ease;
+    }
+
+    .nav-btn-back:hover {
+      background: #e2e8f0;
+      color: var(--text-main);
+    }
+
+    /* Container Principal */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 2.5rem 1.5rem;
+    }
+
+    /* Cabeçalho de Destaque Obrigatório */
+    .hero-header {
+      text-align: center;
+      margin-bottom: 3rem;
+      max-width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-title {
+      font-family: var(--font-heading);
+      font-size: 2.75rem;
+      font-weight: 800;
+      color: var(--text-main);
+      letter-spacing: -1px;
+      line-height: 1.15;
+      margin-bottom: 0.75rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    /* Grid dos 3 Cartões Principais */
+    .fiscal-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: stretch;
+    }
+
+    /* Estilo Base dos Cartões (Cards) */
+    .fiscal-card {
+      background: var(--bg-card);
+      border-radius: var(--radius-card);
+      border: 1px solid var(--border-default);
+      box-shadow: var(--shadow-card);
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .fiscal-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-hover);
+      border-color: #cbd5e1;
+    }
+
+    /* Cabeçalho do Cartão */
+    .card-top-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.75rem;
+    }
+
+    .card-title {
+      font-family: var(--font-heading);
+      font-size: 1.65rem;
+      font-weight: 800;
+      color: var(--color-orange-title); /* Títulos em Laranja */
+      letter-spacing: -0.5px;
+      line-height: 1.2;
+    }
+
+    /* Logo Estilizada SEFAZ */
+    .sefaz-stamp {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      background: var(--color-sefaz-bg);
+      color: var(--color-sefaz-blue);
+      border: 1px solid #bae6fd;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    }
+
+    .sefaz-stamp svg {
+      width: 14px;
+      height: 14px;
+      fill: currentColor;
+    }
+
+    .card-description {
+      font-size: 0.95rem;
+      color: var(--text-main); /* Textos descritivos em Preto/Grafite */
+      margin-bottom: 1.5rem;
+      line-height: 1.5;
+    }
+
+    /* ==========================================================================
+       MÓDULO 1: GESTOR LC (DASHBOARD, GRÁFICO DE BARRAS & PIZZA)
+       ========================================================================== */
+    .lc-kpi-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .lc-kpi-box {
+      background: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      border: 1px solid #e2e8f0;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+
+    .lc-kpi-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius-sm);
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.35rem;
+      flex-shrink: 0;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+    }
+
+    .lc-kpi-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .lc-kpi-title {
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .lc-kpi-value {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+      font-family: var(--font-heading);
+    }
+
+    /* Gráfico de Barras Moderno (Vendas) */
+    .chart-container-card {
+      background: #ffffff;
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      padding: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .chart-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+    }
+
+    .chart-label {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .bar-chart-visual {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      height: 120px;
+      gap: 0.4rem;
+      padding-top: 1rem;
+      border-bottom: 1px solid #e2e8f0;
+    }
+
+    .bar-col {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: flex-end;
+      position: relative;
+    }
+
+    .bar-fill {
+      width: 100%;
+      border-radius: 4px 4px 0 0;
+      transition: all 0.3s ease;
+      cursor: pointer;
+    }
+
+    .bar-fill:hover {
+      opacity: 0.85;
+      transform: scaleY(1.05);
+      transform-origin: bottom;
+    }
+
+    .bar-month {
+      font-size: 0.7rem;
+      color: var(--text-muted);
+      margin-top: 0.4rem;
+      font-weight: 600;
+    }
+
+    /* Gráfico de Pizza / Donut (Casos e Pedidos) */
+    .pie-section-wrapper {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      background: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      border: 1px solid #e2e8f0;
+      margin-top: auto;
+    }
+
+    .donut-chart-svg {
+      width: 80px;
+      height: 80px;
+      flex-shrink: 0;
+      transform: rotate(-90deg);
+    }
+
+    .donut-legend {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+    }
+
+    .donut-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      color: var(--text-secondary);
+      font-weight: 500;
+    }
+
+    .legend-color-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+
+    /* ==========================================================================
+       MÓDULO 2: EMISSOR NF-e (TRANSMISSÃO CONCLUÍDA & CAMPOS SEFAZ)
+       ========================================================================== */
+    /* Indicador Visual Claro de Transmissão Concluída */
+    .status-transmission-box {
+      background: var(--color-green-bg);
+      border: 1.5px solid var(--color-green-border);
+      border-radius: var(--radius-sm);
+      padding: 0.9rem 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(22, 163, 74, 0.1);
+    }
+
+    .status-check-circle {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--color-green-success);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      font-weight: 800;
+      flex-shrink: 0;
+      box-shadow: 0 0 10px rgba(22, 163, 74, 0.4);
+    }
+
+    .status-transmission-texts {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .status-transmission-main {
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #14532d;
+      letter-spacing: -0.2px;
+    }
+
+    .status-transmission-sub {
+      font-size: 0.78rem;
+      color: #166534;
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    /* Campos de Formulário Modernos com Ícones */
+    .modern-form-group {
+      margin-bottom: 1.15rem;
+    }
+
+    .modern-form-label {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-secondary);
+      margin-bottom: 0.4rem;
+    }
+
+    .modern-input-wrapper {
+      position: relative;
+      display: flex;
+      align-items: center;
+    }
+
+    .modern-input-icon {
+      position: absolute;
+      left: 1rem;
+      font-size: 1.1rem;
+      color: var(--text-muted);
+      pointer-events: none;
+      display: flex;
+      align-items: center;
+    }
+
+    .modern-input-field {
+      width: 100%;
+      background: var(--bg-input);
+      border: 1px solid var(--border-default);
+      color: var(--text-main);
+      padding: 0.75rem 1rem 0.75rem 2.75rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-family: var(--font-sans);
+      font-weight: 500;
+      transition: all 0.2s ease;
+    }
+
+    .modern-input-field:focus {
+      outline: none;
+      border-color: var(--color-orange-title);
+      box-shadow: 0 0 0 3px rgba(234, 88, 12, 0.15);
+    }
+
+    .nfe-details-pill {
+      background: var(--bg-subtle);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-sm);
+      padding: 0.85rem;
+      font-size: 0.8rem;
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .nfe-detail-line {
+      display: flex;
+      justify-content: space-between;
+      color: var(--text-secondary);
+    }
+
+    .nfe-detail-line strong {
+      color: var(--text-main);
+    }
+
+    /* ==========================================================================
+       MÓDULO 3: EMISSOR MDF-e (MAPA DE ROTA DE TRANSPORTE & CHECK-IN)
+       ========================================================================== */
+    .map-route-container {
+      background: #ffffff;
+      border: 1px solid var(--border-default);
+      border-radius: var(--radius-sm);
+      padding: 1rem;
+      margin-bottom: 1.25rem;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+      position: relative;
+    }
+
+    .map-route-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.75rem;
+      font-size: 0.85rem;
+      font-weight: 700;
+    }
+
+    .route-svg-box {
+      width: 100%;
+      height: 140px;
+      background: #f1f5f9;
+      border-radius: 6px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .route-checkin-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: #ffffff;
+      border: 1px solid #cbd5e1;
+      padding: 0.35rem 0.65rem;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #1e293b;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08);
+      position: absolute;
+      top: 25px;
+      left: 45%;
+      transform: translateX(-50%);
+      z-index: 10;
+      animation: float-badge 3s infinite ease-in-out;
+    }
+
+    @keyframes float-badge {
+      0%, 100% { transform: translate(-50%, 0); }
+      50% { transform: translate(-50%, -4px); }
+    }
+
+    .mdfe-vehicle-card {
+      background: var(--bg-subtle);
+      border: 1px solid #e2e8f0;
+      border-radius: var(--radius-sm);
+      padding: 0.85rem;
+      font-size: 0.82rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      margin-bottom: 1.25rem;
+    }
+
+    /* Botões de Ação do Design System */
+    .card-action-btn {
+      width: 100%;
+      padding: 0.8rem 1.25rem;
+      border-radius: var(--radius-sm);
+      font-size: 0.9rem;
+      font-weight: 700;
+      cursor: pointer;
+      border: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      transition: all 0.2s ease;
+      margin-top: auto;
+      text-decoration: none;
+    }
+
+    .btn-orange-primary {
+      background: var(--color-orange-title);
+      color: #ffffff;
+      box-shadow: 0 4px 12px rgba(234, 88, 12, 0.25);
+    }
+
+    .btn-orange-primary:hover {
+      background: var(--color-orange-hover);
+      box-shadow: 0 6px 16px rgba(234, 88, 12, 0.35);
+    }
+
+    .btn-outline {
+      background: #ffffff;
+      color: var(--text-main);
+      border: 1.5px solid var(--border-default);
+    }
+
+    .btn-outline:hover {
+      background: var(--bg-subtle);
+      border-color: #cbd5e1;
+    }
+
+    /* Modal de Detalhes / Simulação */
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(15, 23, 42, 0.6);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.2s ease;
+    }
+
+    .modal-overlay.open {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .modal-box {
+      background: #ffffff;
+      border-radius: var(--radius-card);
+      width: 90%;
+      max-width: 600px;
+      padding: 2rem;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+      border: 1px solid var(--border-default);
+    }
+
+    /* Responsividade */
+    @media (max-width: 1080px) {
+      .fiscal-grid {
+        grid-template-columns: 1fr;
+      }
+      .hero-title {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Barra de Navegação -->
+  <header class="top-nav">
+    <a href="/fiscal.html" class="nav-brand">
+      <div class="nav-brand-icon">⚡</div>
+      <div class="nav-brand-text">SEFAZ AUTO-SUITE</div>
+      <span class="nav-brand-badge">SaaS Fiscal v2.0</span>
+    </a>
+
+    <div class="nav-links">
+      <a href="/" class="nav-btn-back">
+        <span>←</span> Voltar para o Sistema do Ferro Velho
+      </a>
+      <a href="#gestor-lc" class="nav-link-btn">Gestor LC</a>
+      <a href="#emissor-nfe" class="nav-link-btn">Emissor NF-e</a>
+      <a href="#emissor-mdfe" class="nav-link-btn">Emissor MDF-e</a>
+    </div>
+  </header>
+
+  <main class="container">
+
+    <!-- Cabeçalho de Destaque Obrigatório -->
+    <section class="hero-header">
+      <h1 class="hero-title">Finanças e documentos fiscais com agilidade e precisão.</h1>
+      <p class="hero-subtitle">
+        Automação completa da cadeia fiscal: controle financeiro e gerencial no Livro Caixa, transmissão instantânea de NF-e autorizada e controle de frete intermunicipal com MDF-e.
+      </p>
+    </section>
+
+    <!-- Grid dos 3 Módulos Reformulados em Cartões Modernos -->
+    <div class="fiscal-grid">
+
+      <!-- =================================================================== -->
+      <!-- CARTÃO 1: GESTOR LC (DASHBOARD FINANCEIRO & LIVRO CAIXA)            -->
+      <!-- =================================================================== -->
+      <article id="gestor-lc" class="fiscal-card">
+        <div class="card-top-header">
+          <h2 class="card-title">Gestor LC</h2>
+          <span style="font-size: 0.75rem; background: #ffedd5; color: #c2410c; padding: 0.25rem 0.5rem; border-radius: 4px; font-weight: 700;">
+            FINANÇAS
+          </span>
+        </div>
+
+        <p class="card-description">
+          Gerenciamento financeiro unificado, conciliação do livro caixa, emissão de faturamento e controle de pedidos comerciais.
+        </p>
+
+        <!-- Métricas Rápidas com Ícones Vetoriais Claros -->
+        <div class="lc-kpi-row">
+          <div class="lc-kpi-box">
+            <div class="lc-kpi-icon" title="Ícone Vetorial de Vendas">
+              <!-- Ícone Gráfico de Vendas -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="20" x2="18" y2="10"></line>
+                <line x1="12" y1="20" x2="12" y2="4"></line>
+                <line x1="6" y1="20" x2="6" y2="14"></line>
+              </svg>
+            </div>
+            <div class="lc-kpi-info">
+              <span class="lc-kpi-title">Vendas (Mês)</span>
+              <span class="lc-kpi-value">R$ 148,9k</span>
+            </div>
+          </div>
+
+          <div class="lc-kpi-box">
+            <div class="lc-kpi-icon" title="Ícone Vetorial de Pedidos / Caminhão">
+              <!-- Ícone Caminhão de Entrega -->
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#0284c7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+            </div>
+            <div class="lc-kpi-info">
+              <span class="lc-kpi-title">Pedidos</span>
+              <span class="lc-kpi-value">342 un</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Gráfico de Barras de Vendas Diárias/Mensais -->
+        <div class="chart-container-card">
+          <div class="chart-header">
+            <span class="chart-label">
+              <span>📈</span> Volume de Vendas Faturadas (2026)
+            </span>
+            <span style="font-size: 0.75rem; color: #16a34a; font-weight: 700;">+14.8% vs 2025</span>
+          </div>
+
+          <div class="bar-chart-visual">
+            <div class="bar-col"><div class="bar-fill" style="height: 48%; background: #93c5fd;" title="Jan: R$ 85k"></div><span class="bar-month">Jan</span></div>
+            <div class="bar-col"><div class="bar-fill" style="height: 38%; background: #93c5fd;" title="Fev: R$ 68k"></div><span class="bar-month">Fev</span></div>
+            <div class="bar-col"><div class="bar-fill" style="height: 65%; background: #93c5fd;" title="Mar: R$ 115k"></div><span class="bar-month">Mar</span></div>
+            <div class="bar-col"><div class="bar-fill" style="height: 52%; background: #93c5fd;" title="Abr: R$ 92k"></div><span class="bar-month">Abr</span></div>
+            <div class="bar-col"><div class="bar-fill" style="height: 72%; background: #93c5fd;" title="Mai: R$ 128k"></div><span class="bar-month">Mai</span></div>
+            <div class="bar-col"><div class="bar-fill" style="height: 85%; background: #ea580c;" title="Jun: R$ 148k (Atual)"></div><span class="bar-month" style="color: #ea580c; font-weight: 800;">Jun</span></div>
+          </div>
+        </div>
+
+        <!-- Gráfico Donut de Casos / Status de Pedidos -->
+        <div class="pie-section-wrapper">
+          <svg class="donut-chart-svg" viewBox="0 0 36 36">
+            <!-- Fundo cinza do círculo -->
+            <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#e2e8f0" stroke-width="4.5"></circle>
+            <!-- Faturados / Entregues (65%) -->
+            <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#16a34a" stroke-width="4.5" stroke-dasharray="65 35" stroke-dashoffset="0"></circle>
+            <!-- Em Transporte (25%) -->
+            <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#ea580c" stroke-width="4.5" stroke-dasharray="25 75" stroke-dashoffset="-65"></circle>
+            <!-- Pendentes (10%) -->
+            <circle cx="18" cy="18" r="15.9155" fill="none" stroke="#38bdf8" stroke-width="4.5" stroke-dasharray="10 90" stroke-dashoffset="-90"></circle>
+          </svg>
+
+          <div class="donut-legend">
+            <div class="donut-legend-item">
+              <span class="legend-color-dot" style="background: #16a34a;"></span>
+              <span>Faturados / Pagos (65%)</span>
+            </div>
+            <div class="donut-legend-item">
+              <span class="legend-color-dot" style="background: #ea580c;"></span>
+              <span>Em Transporte / Rota (25%)</span>
+            </div>
+            <div class="donut-legend-item">
+              <span class="legend-color-dot" style="background: #38bdf8;"></span>
+              <span>Em Conferência (10%)</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="card-action-btn btn-outline" style="margin-top: 1.5rem;" onclick="abrirModalRelatorio()">
+          <span>📊</span> Acessar Painel Financeiro Detalhado
+        </button>
+      </article>
+
+      <!-- =================================================================== -->
+      <!-- CARTÃO 2: EMISSOR NF-e (AUTOMAÇÃO FISCAL & TRANSMISSÃO SEFAZ)       -->
+      <!-- =================================================================== -->
+      <article id="emissor-nfe" class="fiscal-card">
+        <div class="card-top-header">
+          <h2 class="card-title">Emissor NF-e</h2>
+          <div class="sefaz-stamp">
+            <!-- Ícone Escudo / Brasão SEFAZ -->
+            <svg viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+            SEFAZ DIRETA
+          </div>
+        </div>
+
+        <p class="card-description">
+          Emissão direta de Notas Fiscais Eletrônicas mod. 55 com validação em tempo real e comunicação com servidores estaduais.
+        </p>
+
+        <!-- Indicador Visual Claro: Transmissão Concluída -->
+        <div class="status-transmission-box">
+          <div class="status-check-circle" title="Transmissão Aprovada pela SEFAZ">
+            ✓
+          </div>
+          <div class="status-transmission-texts">
+            <span class="status-transmission-main">Transmissão Concluída</span>
+            <span class="status-transmission-sub">Protocolo: 135260981240184 • Autorizado</span>
+          </div>
+        </div>
+
+        <!-- Formulário Moderno e Espaçado com Ícones de Nuvem/XML e Cadeado -->
+        <div class="modern-form-group">
+          <label class="modern-form-label">
+            <span>Carga de Dados na Nuvem / XML</span>
+            <span style="color: #16a34a; font-size: 0.75rem;">Schema XML v4.00</span>
+          </label>
+          <div class="modern-input-wrapper">
+            <div class="modern-input-icon">
+              <!-- Ícone Nuvem / XML -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"></path>
+              </svg>
+            </div>
+            <input type="text" class="modern-input-field" value="NFe-35260918922381000140550010000084211098.xml" readonly>
+          </div>
+        </div>
+
+        <div class="modern-form-group">
+          <label class="modern-form-label">
+            <span>Segurança & Certificado Digital A1</span>
+            <span style="color: #0284c7; font-size: 0.75rem;">ICP-Brasil Ativo</span>
+          </label>
+          <div class="modern-input-wrapper">
+            <div class="modern-input-icon">
+              <!-- Ícone Cadeado de Segurança -->
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#16a34a" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <input type="text" class="modern-input-field" value="Certificado: Ferro Velho do Paulinho LTDA - CNPJ 44.628.855/0001-37 (Válido até 12/2027)" readonly>
+          </div>
+        </div>
+
+        <!-- Detalhes Fiscais da Operação -->
+        <div class="nfe-details-pill">
+          <div class="nfe-detail-line">
+            <span>Destinatário:</span>
+            <strong>Auto Mecânica São Jorge Ltda</strong>
+          </div>
+          <div class="nfe-detail-line">
+            <span>Natureza da Operação:</span>
+            <strong>Venda de Autopeças Usadas (CFOP 5.102)</strong>
+          </div>
+          <div class="nfe-detail-line">
+            <span>Valor Total da Nota:</span>
+            <strong style="color: #16a34a; font-size: 0.95rem;">R$ 4.850,00</strong>
+          </div>
+          <div class="nfe-detail-line">
+            <span>Chave de Acesso:</span>
+            <strong style="font-family: var(--font-mono); font-size: 0.75rem;">3526 0918 9223 8100 0140 5500 1000 0084 2110</strong>
+          </div>
+        </div>
+
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.75rem; margin-top: 1.25rem;">
+          <button class="card-action-btn btn-orange-primary" onclick="abrirDanfe()">
+            <span>📄</span> Visualizar DANFE
+          </button>
+          <button class="card-action-btn btn-outline" onclick="baixarXml()">
+            <span>💾</span> Baixar XML
+          </button>
+        </div>
+        <a href="/#tab-emissao-nfe" class="card-action-btn" style="margin-top: 0.75rem; background: #16a34a; color: white; text-decoration: none; font-size: 0.88rem;" onclick="localStorage.setItem('gotoTab', 'tab-emissao-nfe')">
+          <span>⚡</span> + Emitir Nova Nota Fiscal (0ms)
+        </a>
+      </article>
+
+      <!-- =================================================================== -->
+      <!-- CARTÃO 3: EMISSOR MDF-e (MAPA DE ROTA DE TRANSPORTE & CHECK-IN)     -->
+      <!-- =================================================================== -->
+      <article id="emissor-mdfe" class="fiscal-card">
+        <div class="card-top-header">
+          <h2 class="card-title">Emissor MDF-e</h2>
+          <div class="sefaz-stamp">
+            <svg viewBox="0 0 24 24">
+              <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm-2 16l-4-4 1.41-1.41L10 14.17l6.59-6.59L18 9l-8 8z"/>
+            </svg>
+            SEFAZ CARGA
+          </div>
+        </div>
+
+        <p class="card-description">
+          Manifesto Eletrônico de Documentos Fiscais para circulação rodoviária intermunicipal e interestadual de sucatas e peças.
+        </p>
+
+        <!-- Mapa Interativo Simplificado de Rota de Transporte -->
+        <div class="map-route-container">
+          <div class="map-route-header">
+            <span style="color: var(--text-main); display: flex; align-items: center; gap: 0.35rem;">
+              <span>📍</span> Rota: São Paulo (SP) → Curitiba (PR)
+            </span>
+            <span style="color: #16a34a; font-size: 0.75rem; font-weight: 700;">● Em Trânsito (BR-116)</span>
+          </div>
+
+          <!-- Visualização Vetorial do Corredor de Transporte -->
+          <div class="route-svg-box">
+            <svg width="100%" height="100%" viewBox="0 0 360 140" fill="none">
+              <!-- Grid rodoviário sutil -->
+              <path d="M 10 40 Q 90 20, 180 50 T 350 40" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3"/>
+              <path d="M 20 110 Q 150 90, 270 120 T 350 100" stroke="#cbd5e1" stroke-width="1.5" stroke-dasharray="3 3"/>
+              
+              <!-- Rodovia Principal da Carga (BR-116 Régis Bittencourt) -->
+              <path d="M 40 100 C 100 100, 140 45, 200 45 S 290 90, 320 35" stroke="#ea580c" stroke-width="4" stroke-linecap="round"/>
+
+              <!-- Pin Origem (SP) -->
+              <circle cx="40" cy="100" r="7" fill="#ea580c" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="25" y="125" fill="#0f172a" font-size="11" font-weight="700">Origem (SP)</text>
+
+              <!-- Pin Destino (PR) -->
+              <circle cx="320" cy="35" r="7" fill="#16a34a" stroke="#ffffff" stroke-width="2.5"/>
+              <text x="290" y="20" fill="#0f172a" font-size="11" font-weight="700">Destino (PR)</text>
+
+              <!-- Checkpoint de Check-in ao Vivo -->
+              <circle cx="180" cy="45" r="5" fill="#0284c7" stroke="#ffffff" stroke-width="2"/>
+            </svg>
+
+            <!-- Badge Flutuante de Check-in do Caminhão -->
+            <div class="route-checkin-badge">
+              <!-- Ícone Caminhão -->
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#ea580c" stroke-width="2.5">
+                <rect x="1" y="3" width="15" height="13"></rect>
+                <polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon>
+                <circle cx="5.5" cy="18.5" r="2.5"></circle>
+                <circle cx="18.5" cy="18.5" r="2.5"></circle>
+              </svg>
+              <span>Check-in: Posto Fiscal Registro (KM 442)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Dados do Veículo e Manifesto -->
+        <div class="mdfe-vehicle-card">
+          <div class="nfe-detail-line">
+            <span>MDF-e Número:</span>
+            <strong>001.000.412 • Série 1</strong>
+          </div>
+          <div class="nfe-detail-line">
+            <span>Veículo Trator / Placa:</span>
+            <strong>Scania R450 (BRA-2E19) • SP</strong>
+          </div>
+          <div class="nfe-detail-line">
+            <span>Motorista Vinculado:</span>
+            <strong>Antônio Carlos Peixoto (CNH E)</strong>
+          </div>
+          <div class="nfe-detail-line">
+            <span>Carga Transportada:</span>
+            <strong>24.500 kg de Sucata Metálica Classificada</strong>
+          </div>
+          <div class="nfe-detail-line">
+            <span>Seguro de Carga RCTR-C:</span>
+            <strong style="color: #0284c7;">Apólice 9021-Porto Seguro</strong>
+          </div>
+        </div>
+
+        <button class="card-action-btn btn-orange-primary" onclick="abrirDamdfe()">
+          <span>🚛</span> Visualizar DAMDFE & Rastrear
+        </button>
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- Modal Interativo de Demonstração -->
+  <div id="modal-fiscal-demo" class="modal-overlay">
+    <div class="modal-box">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.25rem;">
+        <h3 id="modal-title" style="font-family: var(--font-heading); font-size: 1.35rem; color: var(--color-orange-title); font-weight: 800;">
+          Documento Fiscal
+        </h3>
+        <button onclick="fecharModal()" style="background: transparent; border: none; font-size: 1.4rem; cursor: pointer; color: var(--text-muted);">✕</button>
+      </div>
+      <div id="modal-body" style="font-size: 0.95rem; color: var(--text-secondary); margin-bottom: 1.5rem; line-height: 1.6;">
+        Conteúdo da demonstração.
+      </div>
+      <button class="card-action-btn btn-outline" onclick="fecharModal()">
+        Fechar Janela
+      </button>
+    </div>
+  </div>
+
+  <script>
+    function abrirDanfe() {
+      document.getElementById('modal-title').textContent = 'DANFE - Nota Fiscal Eletrônica Nº 000.000.842';
+      document.getElementById('modal-body').innerHTML = `
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem;">
+          <div style="font-weight: bold; text-align: center; margin-bottom: 0.5rem; font-size: 1rem;">
+            DOCUMENTO AUXILIAR DA NOTA FISCAL ELETRÔNICA
+          </div>
+          <div><strong>CHAVE DE ACESSO:</strong> 5326 0944 6288 5500 0137 5500 1000 0084 2110 9812 4018</div>
+          <div><strong>PROTOCOLO DE AUTORIZAÇÃO:</strong> 153260981240184 - 27/09/2026 17:42:10</div>
+          <div><strong>EMITENTE:</strong> FERRO VELHO DO PAULINHO LTDA - CNPJ 44.628.855/0001-37</div>
+          <div><strong>ENDEREÇO:</strong> QUADRA QN 425 CJ I LT 1 - SAMAMBAIA NORTE, BRASÍLIA - DF</div>
+          <div><strong>DESTINATÁRIO:</strong> AUTO MECÂNICA SÃO JORGE LTDA - CNPJ 14.283.910/0001-55</div>
+          <div><strong>VALOR TOTAL DA NOTA:</strong> R$ 4.850,00</div>
+          <div style="margin-top: 0.5rem; color: #16a34a; font-weight: bold;">
+            ✓ TRANSMISSÃO E AUTORIZAÇÃO SEFAZ-DF REGISTRADA COM SUCESSO (0ms)
+          </div>
+        </div>
+      `;
+      document.getElementById('modal-fiscal-demo').classList.add('open');
+    }
+
+    function baixarXml() {
+      document.getElementById('modal-title').textContent = 'Download do XML Autorizado';
+      document.getElementById('modal-body').innerHTML = `
+        <p>O arquivo XML assinado digitalmente com certificado <strong>ICP-Brasil A1</strong> e chancelado pelo servidor SEFAZ foi empacotado para download conforme o padrão do manual de integração v4.00.</p>
+        <p style="margin-top: 0.75rem; font-family: monospace; font-size: 0.85rem; background: #f1f5f9; padding: 0.5rem; border-radius: 6px;">
+          Arquivo: NFe35260918922381000140550010000084211098124018.xml (24.8 KB)
+        </p>
+      `;
+      document.getElementById('modal-fiscal-demo').classList.add('open');
+    }
+
+    function abrirDamdfe() {
+      document.getElementById('modal-title').textContent = 'DAMDFE - Manifesto de Documentos Fiscais Eletrônicos';
+      document.getElementById('modal-body').innerHTML = `
+        <div style="background: #f8fafc; border: 1px solid #e2e8f0; padding: 1rem; border-radius: 8px; font-family: monospace; font-size: 0.85rem;">
+          <div style="font-weight: bold; text-align: center; margin-bottom: 0.5rem; font-size: 1rem;">
+            DOCUMENTO AUXILIAR DO MANIFESTO ELETRÔNICO DE DOCUMENTOS FISCAIS
+          </div>
+          <div><strong>MDF-e Nº:</strong> 000.000.412 - Série 1</div>
+          <div><strong>PLACA VEÍCULO:</strong> BRA-2E19 (Trator) / CAR-9011 (Reboque)</div>
+          <div><strong>MOTORISTA:</strong> ANTÔNIO CARLOS PEIXOTO</div>
+          <div><strong>ROTA AUTORIZADA:</strong> SP -> PR (Posto Fiscal Registro)</div>
+          <div><strong>PESO BRUTO DA CARGA:</strong> 24.500 kg</div>
+          <div style="margin-top: 0.5rem; color: #0284c7; font-weight: bold;">
+            ● VEÍCULO LIBERADO PELA SEFAZ PARA CIRCULAÇÃO RODOVIÁRIA
+          </div>
+        </div>
+      `;
+      document.getElementById('modal-fiscal-demo').classList.add('open');
+    }
+
+    function abrirModalRelatorio() {
+      document.getElementById('modal-title').textContent = 'Gestor LC - Relatório Consolidado';
+      document.getElementById('modal-body').innerHTML = `
+        <p>Visão consolidada de fechamento contábil e livro caixa:</p>
+        <ul style="margin-top: 0.75rem; padding-left: 1.25rem;">
+          <li>Faturamento Bruto Mensal: <strong>R$ 148.920,00</strong></li>
+          <li>Despesas Operacionais & Compras de Sucata: <strong>R$ 82.410,00</strong></li>
+          <li>Resultado Líquido do Caixa: <strong>R$ 66.510,00</strong></li>
+          <li>Total de Pedidos Expedidos: <strong>342 pedidos</strong></li>
+        </ul>
+      `;
+      document.getElementById('modal-fiscal-demo').classList.add('open');
+    }
+
+    function fecharModal() {
+      document.getElementById('modal-fiscal-demo').classList.remove('open');
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+# Dependências e caches
+__pycache__/
+*.py[cod]
+*$py.class
+*.log
+.DS_Store
+Thumbs.db
+
+# Contextos e arquivos temporários
+_frameworks_context/
+*.zip
+*.tar.gz
+*.rar
+
+# Ambientes virtuais e IDEs
+venv/
+env/
+.env
+.venv/
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Builds e temporários
+dist/
+build/
+node_modules/
+.system_generated/
+.agents/
+.gemini/

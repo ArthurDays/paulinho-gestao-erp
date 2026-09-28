@@ -1,0 +1,1581 @@
+{
+  "materiais": [
+    {
+      "id": "MT-COB-01",
+      "nome": "Cobre Mel (Fio Limpo 1ª)",
+      "categoria": "Cobre",
+      "preco_compra_kg": 42.0,
+      "preco_venda_kg": 48.5,
+      "tolerancia_impureza": 2.0,
+      "cor": "#ef4444",
+      "icone": "fa-bolt",
+      "descricao": "Fios elétricos desencapados, brilhantes, sem queima ou verniz."
+    },
+    {
+      "id": "MT-COB-02",
+      "nome": "Cobre Misto / Queimado",
+      "categoria": "Cobre",
+      "preco_compra_kg": 36.5,
+      "preco_venda_kg": 42.0,
+      "tolerancia_impureza": 5.0,
+      "cor": "#dc2626",
+      "icone": "fa-fire",
+      "descricao": "Tubos soldados, induzidos de motor, chicotes queimados."
+    },
+    {
+      "id": "MT-ALU-01",
+      "nome": "Alumínio Perfil Limpo",
+      "categoria": "Aluminio",
+      "preco_compra_kg": 11.5,
+      "preco_venda_kg": 14.0,
+      "tolerancia_impureza": 2.0,
+      "cor": "#38bdf8",
+      "icone": "fa-border-all",
+      "descricao": "Esquadrias, perfis de cortina de carroceria, sem ferro ou rebites."
+    },
+    {
+      "id": "MT-ALU-02",
+      "nome": "Alumínio Estamparia / Chaparia",
+      "categoria": "Aluminio",
+      "preco_compra_kg": 9.2,
+      "preco_venda_kg": 11.8,
+      "tolerancia_impureza": 4.0,
+      "cor": "#0284c7",
+      "icone": "fa-shapes",
+      "descricao": "Chapas automotivas, panelas sem alça, recortes limpos."
+    },
+    {
+      "id": "MT-ALU-03",
+      "nome": "Alumínio Bloco / Cárter / Antimônio",
+      "categoria": "Aluminio",
+      "preco_compra_kg": 8.0,
+      "preco_venda_kg": 10.2,
+      "tolerancia_impureza": 8.0,
+      "cor": "#0369a1",
+      "icone": "fa-cubes",
+      "descricao": "Carcaças de câmbio e motor, bombas d'água desferradas."
+    },
+    {
+      "id": "MT-LAT-01",
+      "nome": "Latão Amarelo / Conexões / Buchas",
+      "categoria": "Latao",
+      "preco_compra_kg": 26.0,
+      "preco_venda_kg": 30.5,
+      "tolerancia_impureza": 3.0,
+      "cor": "#eab308",
+      "icone": "fa-gem",
+      "descricao": "Torneiras, conexões hidráulicas, buchas de suspensão, bicos."
+    },
+    {
+      "id": "MT-FER-01",
+      "nome": "Ferro Sucata Pesada (Chapas / Vigas)",
+      "categoria": "Ferro",
+      "preco_compra_kg": 1.2,
+      "preco_venda_kg": 1.65,
+      "tolerancia_impureza": 5.0,
+      "cor": "#64748b",
+      "icone": "fa-weight-hanging",
+      "descricao": "Chassis de caminhão, vigas I, eixos maciços acima de 4mm."
+    },
+    {
+      "id": "MT-FER-02",
+      "nome": "Ferro Fundido (Tambores / Discos Quebrados)",
+      "categoria": "Ferro",
+      "preco_compra_kg": 1.1,
+      "preco_venda_kg": 1.5,
+      "tolerancia_impureza": 4.0,
+      "cor": "#475569",
+      "icone": "fa-circle-notch",
+      "descricao": "Discos de freio trincados, blocos de motor de ferro, carcaças."
+    },
+    {
+      "id": "MT-FER-03",
+      "nome": "Ferro Sucata Miúda / Estamparia",
+      "categoria": "Ferro",
+      "preco_compra_kg": 0.85,
+      "preco_venda_kg": 1.25,
+      "tolerancia_impureza": 7.0,
+      "cor": "#334155",
+      "icone": "fa-compress-arrows-alt",
+      "descricao": "Lataria veicular, tetos recortados, portas danificadas."
+    },
+    {
+      "id": "MT-BAT-01",
+      "nome": "Bateria Automotiva Chumbo-Ácido",
+      "categoria": "Bateria",
+      "preco_compra_kg": 4.8,
+      "preco_venda_kg": 6.2,
+      "tolerancia_impureza": 0.0,
+      "cor": "#a855f7",
+      "icone": "fa-car-battery",
+      "descricao": "Baterias automotivas seladas de 45Ah a 180Ah íntegras."
+    },
+    {
+      "id": "MT-INO-01",
+      "nome": "Aço Inox 304 Não-Magnético",
+      "categoria": "Inox",
+      "preco_compra_kg": 8.5,
+      "preco_venda_kg": 11.0,
+      "tolerancia_impureza": 2.0,
+      "cor": "#94a3b8",
+      "icone": "fa-shield-alt",
+      "descricao": "Escapamentos esportivos, tanques de inox, tubulações 304."
+    },
+    {
+      "id": "MT-RAD-01",
+      "nome": "Radiadores Automotivos Mistos",
+      "categoria": "Especiais",
+      "preco_compra_kg": 18.0,
+      "preco_venda_kg": 22.0,
+      "tolerancia_impureza": 5.0,
+      "cor": "#f97316",
+      "icone": "fa-fan",
+      "descricao": "Colmeias de radiador de cobre/latão ou alumínio."
+    }
+  ],
+  "parceiros": [
+    {
+      "id": "PAR-001",
+      "tipo": "FORNECEDOR",
+      "nome": "Sebastião da Silva (Tião da Carreta)",
+      "documento": "512.839.108-44",
+      "telefone": "(11) 98765-4321",
+      "chave_pix": "11987654321",
+      "placa": "BTZ-9012",
+      "categoria": "Catador Autônomo"
+    },
+    {
+      "id": "PAR-002",
+      "tipo": "AMBOS",
+      "nome": "Auto Mecânica & Funilaria São Jorge Ltda",
+      "documento": "14.283.910/0001-55",
+      "telefone": "(11) 3456-7890",
+      "chave_pix": "financeiro@mecanicasaojorge.com.br",
+      "placa": "BRA2E19",
+      "categoria": "Oficina Credenciada"
+    },
+    {
+      "id": "PAR-003",
+      "tipo": "FORNECEDOR",
+      "nome": "Marcos Vinicius de Oliveira",
+      "documento": "382.190.472-00",
+      "telefone": "(11) 99123-8877",
+      "chave_pix": "marcos.metais@gmail.com",
+      "placa": "EVM-4567",
+      "categoria": "Comerciante de Sucata"
+    },
+    {
+      "id": "PAR-004",
+      "tipo": "CLIENTE",
+      "nome": "Siderúrgica & Fundição AçoForte S/A",
+      "documento": "03.921.847/0001-90",
+      "telefone": "(19) 3211-5000",
+      "chave_pix": "03921847000190",
+      "placa": "FXT-8899",
+      "categoria": "Indústria Siderúrgica"
+    },
+    {
+      "id": "PAR-005",
+      "tipo": "CLIENTE",
+      "nome": "Carlos Eduardo Mendonça (Cliente Balcão)",
+      "documento": "421.789.012-33",
+      "telefone": "(11) 97412-3322",
+      "chave_pix": "carlos.edu@hotmail.com",
+      "placa": "RJK-8B15",
+      "categoria": "Consumidor Final"
+    }
+  ],
+  "veiculos_desmanche": [
+    {
+      "id": "VD-001",
+      "marca_modelo": "Volkswagen Jetta TSI 2.0 Preto",
+      "ano": 2019,
+      "placa": "GHT-4J82",
+      "chassi": "9BWKB41K9KM089211",
+      "renavam": "01129482710",
+      "certidao_baixa": "DETRAN-SP/BAIXA-2026-9812",
+      "baia": "Baia 1 (Elevador Esquerdo)",
+      "status": "Em Desmontagem",
+      "progresso": 100,
+      "descontaminado": true,
+      "foto_tag": "Sedan Preto da foto",
+      "fluidos_drenados": {
+        "oleo_motor": 4.5,
+        "oleo_cambio": 6.0,
+        "arrefecimento": 7.0,
+        "fluido_freio": 0.8,
+        "bateria_chumbo": true,
+        "gas_ac": true
+      },
+      "pecas_geradas": 13,
+      "sucata_gerada_kg": 455.0
+    },
+    {
+      "id": "VD-002",
+      "marca_modelo": "Jeep Compass Longitude 2.0 Flex Prata",
+      "ano": 2021,
+      "placa": "RJK-8B15",
+      "chassi": "9886FB218MK209144",
+      "renavam": "01239847192",
+      "certidao_baixa": "DETRAN-SP/BAIXA-2026-4431",
+      "baia": "Baia 2 (Elevador Direito)",
+      "status": "Em Desmontagem",
+      "progresso": 45,
+      "descontaminado": true,
+      "foto_tag": "SUV Prata da foto",
+      "fluidos_drenados": {
+        "oleo_motor": 4.8,
+        "oleo_cambio": 5.5,
+        "arrefecimento": 6.5,
+        "fluido_freio": 0.9,
+        "bateria_chumbo": true,
+        "gas_ac": true
+      },
+      "pecas_geradas": 8,
+      "sucata_gerada_kg": 310.0
+    },
+    {
+      "id": "VD-003",
+      "marca_modelo": "Chevrolet Onix Plus 1.0 Turbo Branco",
+      "ano": 2022,
+      "placa": "FBC-1A90",
+      "chassi": "9BGKS69M0NG192837",
+      "renavam": "01348192841",
+      "certidao_baixa": "DETRAN-SP/BAIXA-2026-1102",
+      "baia": "Baia 1 (Elevador Esquerdo)",
+      "status": "Em Desmontagem",
+      "progresso": 0,
+      "descontaminado": true,
+      "foto_tag": "Veículo em triagem inicial",
+      "fluidos_drenados": {
+        "oleo_motor": 0.0,
+        "oleo_cambio": 0.0,
+        "arrefecimento": 0.0,
+        "fluido_freio": 0.0,
+        "bateria_chumbo": false,
+        "gas_ac": false
+      },
+      "pecas_geradas": 0,
+      "sucata_gerada_kg": 0.0
+    }
+  ],
+  "estantes": [
+    {
+      "id": "EST-01",
+      "ala": "Esquerda",
+      "posicao": 1,
+      "titulo": "Estante 01 - Freios & Discos",
+      "capacidade_max": 40,
+      "ocupacao": 32,
+      "icone": "fa-disc"
+    },
+    {
+      "id": "EST-02",
+      "ala": "Esquerda",
+      "posicao": 2,
+      "titulo": "Estante 02 - Suspensão & Molas",
+      "capacidade_max": 40,
+      "ocupacao": 29,
+      "icone": "fa-cogs"
+    },
+    {
+      "id": "EST-03",
+      "ala": "Esquerda",
+      "posicao": 3,
+      "titulo": "Estante 03 - Motor & Cabeçotes",
+      "capacidade_max": 40,
+      "ocupacao": 35,
+      "icone": "fa-wrench"
+    },
+    {
+      "id": "EST-04",
+      "ala": "Esquerda",
+      "posicao": 4,
+      "titulo": "Estante 04 - Caixas Kraft & Acessórios",
+      "capacidade_max": 50,
+      "ocupacao": 44,
+      "icone": "fa-box"
+    },
+    {
+      "id": "EST-05",
+      "ala": "Direita",
+      "posicao": 1,
+      "titulo": "Estante 05 - Rodas, Pneus & Bins Amarelos",
+      "capacidade_max": 40,
+      "ocupacao": 29,
+      "icone": "fa-life-ring"
+    },
+    {
+      "id": "EST-06",
+      "ala": "Direita",
+      "posicao": 2,
+      "titulo": "Estante 06 - Bins Azuis & Peças Médias",
+      "capacidade_max": 50,
+      "ocupacao": 41,
+      "icone": "fa-archive"
+    },
+    {
+      "id": "EST-07",
+      "ala": "Direita",
+      "posicao": 3,
+      "titulo": "Estante 07 - Alternadores & Motor Partida",
+      "capacidade_max": 40,
+      "ocupacao": 26,
+      "icone": "fa-bolt"
+    },
+    {
+      "id": "EST-08",
+      "ala": "Direita",
+      "posicao": 4,
+      "titulo": "Estante 08 - Chicotes & Conectores",
+      "capacidade_max": 50,
+      "ocupacao": 40,
+      "icone": "fa-microchip"
+    }
+  ],
+  "pecas_estoque": [
+    {
+      "id": "PC-2026-001",
+      "codigo_oem": "1K0615301AA",
+      "descricao": "Par de Discos de Freio Ventilados Dianteiros",
+      "categoria": "Freios",
+      "veiculo_origem": "Volkswagen Jetta TSI 2.0 (VD-001)",
+      "estante_id": "EST-01",
+      "nivel": 2,
+      "posicao": "N2-P04",
+      "condicao": "Grau A - Excelente",
+      "preco_venda": 480.0,
+      "status": "Vendido",
+      "foto_icone": "fa-compact-disc"
+    },
+    {
+      "id": "PC-2026-002",
+      "codigo_oem": "06J903023C",
+      "descricao": "Alternador 140A Bosch Original",
+      "categoria": "Elétrica",
+      "veiculo_origem": "Volkswagen Jetta TSI 2.0 (VD-001)",
+      "estante_id": "EST-07",
+      "nivel": 3,
+      "posicao": "N3-P01",
+      "condicao": "Grau A - Excelente",
+      "preco_venda": 750.0,
+      "status": "Disponível",
+      "foto_icone": "fa-bolt"
+    },
+    {
+      "id": "PC-2026-003",
+      "codigo_oem": "51989021",
+      "descricao": "Mola Helicoidal e Amortecedor Dianteiro Direito",
+      "categoria": "Suspensão",
+      "veiculo_origem": "Jeep Compass Longitude (VD-002)",
+      "estante_id": "EST-02",
+      "nivel": 3,
+      "posicao": "N3-P06",
+      "condicao": "Grau B - Bom",
+      "preco_venda": 520.0,
+      "status": "Disponível",
+      "foto_icone": "fa-compress-v"
+    },
+    {
+      "id": "PC-2026-004",
+      "codigo_oem": "7089123",
+      "descricao": "Compressor de Ar Condicionado Denso",
+      "categoria": "Mecânica",
+      "veiculo_origem": "Jeep Compass Longitude (VD-002)",
+      "estante_id": "EST-04",
+      "nivel": 4,
+      "posicao": "N4-CX12",
+      "condicao": "Grau A - Excelente",
+      "preco_venda": 890.0,
+      "status": "Disponível",
+      "foto_icone": "fa-snowflake"
+    },
+    {
+      "id": "PC-2026-005",
+      "codigo_oem": "5209812",
+      "descricao": "Kit de Parafusos e Porcas Especiais de Roda (Jogo 16 un)",
+      "categoria": "Fixação",
+      "veiculo_origem": "Jeep Compass Longitude (VD-002)",
+      "estante_id": "EST-05",
+      "nivel": 1,
+      "posicao": "N1-BIN-AM03",
+      "condicao": "Grau A - Excelente",
+      "preco_venda": 120.0,
+      "status": "Disponível",
+      "foto_icone": "fa-th-large"
+    },
+    {
+      "id": "PC-2026-006",
+      "codigo_oem": "06J103383D",
+      "descricao": "Cabeçote Completo com Válvulas e Comando",
+      "categoria": "Motor",
+      "veiculo_origem": "Volkswagen Jetta TSI 2.0 (VD-001)",
+      "estante_id": "EST-03",
+      "nivel": 2,
+      "posicao": "N2-P02",
+      "condicao": "Grau B - Bom",
+      "preco_venda": 2400.0,
+      "status": "Disponível",
+      "foto_icone": "fa-cogs"
+    },
+    {
+      "id": "PC-2026-007",
+      "codigo_oem": "7098412",
+      "descricao": "Roda de Liga Leve Original Aro 18 com Pneu Meia-Vida",
+      "categoria": "Rodas",
+      "veiculo_origem": "Jeep Compass Longitude (VD-002)",
+      "estante_id": "EST-05",
+      "nivel": 1,
+      "posicao": "N1-PALETE-01",
+      "condicao": "Grau A - Excelente",
+      "preco_venda": 650.0,
+      "status": "Vendido",
+      "foto_icone": "fa-circle"
+    },
+    {
+      "id": "PC-2026-008",
+      "codigo_oem": "5190281",
+      "descricao": "Módulo de Injeção Eletrônica Magneti Marelli",
+      "categoria": "Elétrica",
+      "veiculo_origem": "Jeep Compass Longitude (VD-002)",
+      "estante_id": "EST-08",
+      "nivel": 4,
+      "posicao": "N4-CX02",
+      "condicao": "Grau A - Excelente",
+      "preco_venda": 1100.0,
+      "status": "Disponível",
+      "foto_icone": "fa-microchip"
+    },
+    {
+      "id": "PC-2026-009",
+      "codigo_oem": "OEM-AUTO",
+      "descricao": "Chicote Eletrico Cobre Jetta",
+      "categoria": "Mecânica",
+      "veiculo_origem": "Veículo Desmanche",
+      "estante_id": "EST-08",
+      "nivel": 2,
+      "posicao": "N2-P01",
+      "condicao": "Grau A - Excelente",
+      "preco_venda": 350.0,
+      "status": "Disponível",
+      "foto_icone": "fa-cogs"
+    },
+    {
+      "id": "PC-SYNC-010",
+      "codigo_oem": "XTEST-OEM-001",
+      "descricao": "Barra Estabilizadora Dianteira",
+      "categoria": "Suspensão",
+      "veiculo_origem": "Honda Civic 2020",
+      "estante_id": "EST-02",
+      "nivel": 3,
+      "posicao": "N3-P10",
+      "preco_custo": 120.0,
+      "preco_venda": 380.0,
+      "quantidade": 2,
+      "condicao": "Grau A - Excelente",
+      "status": "Disponível",
+      "foto_icone": "fa-cogs"
+    },
+    {
+      "id": "PC-SYNC-011",
+      "codigo_oem": "XTEST-OEM-002",
+      "descricao": "Bobina de Ignição NGK",
+      "categoria": "Elétrica",
+      "veiculo_origem": "Toyota Corolla 2021",
+      "estante_id": "EST-08",
+      "nivel": 2,
+      "posicao": "N2-P05",
+      "preco_custo": 45.0,
+      "preco_venda": 190.0,
+      "quantidade": 4,
+      "condicao": "Grau A - Excelente",
+      "status": "Disponível",
+      "foto_icone": "fa-cogs"
+    },
+    {
+      "id": "PC-SYNC-012",
+      "codigo_oem": "TEST1234",
+      "descricao": "Peça Teste Sync",
+      "categoria": "Freios",
+      "veiculo_origem": "Importação Planilha",
+      "estante_id": "EST-01",
+      "nivel": 2,
+      "posicao": "N2-P01",
+      "preco_custo": 0.0,
+      "preco_venda": 150.0,
+      "quantidade": 1,
+      "condicao": "Grau B - Bom Estado",
+      "status": "Disponível",
+      "foto_icone": "fa-cogs"
+    }
+  ],
+  "romaneios": [
+    {
+      "tipo": "COMPRA",
+      "valor_total": 966,
+      "itens": [
+        {
+          "peso_bruto": 25,
+          "subtotal": 966,
+          "tara": 2,
+          "material_nome": "Cobre Mel (Fio Limpo 1a)",
+          "cor": "#ef4444",
+          "categoria": "Cobre",
+          "impureza_pct": 0,
+          "material_id": "MT-COB-01",
+          "preco_unitario": 42,
+          "peso_liquido": 23,
+          "peso_faturado": 23
+        }
+      ],
+      "observacoes": "Teste automatizado",
+      "tara_total": 2,
+      "operador": "Paulinho Teste",
+      "peso_bruto_total": 25,
+      "parceiro_nome": "Sebastiao da Silva",
+      "parceiro_id": "PAR-001",
+      "metodo_pagamento": "PIX",
+      "peso_liquido_total": 23,
+      "id": "ROM-2026-00843",
+      "data_hora": "2026-09-27T17:33:44.506994",
+      "status": "PAGO"
+    },
+    {
+      "id": "ROM-2026-00841",
+      "tipo": "COMPRA",
+      "parceiro_id": "PAR-001",
+      "parceiro_nome": "Sebastião da Silva (Tião da Carreta)",
+      "data_hora": "2026-09-27T14:30:00",
+      "operador": "Paulinho (Balcão 01)",
+      "status": "PAGO",
+      "itens": [
+        {
+          "material_id": "MT-COB-01",
+          "material_nome": "Cobre Mel (Fio Limpo 1ª)",
+          "peso_bruto": 18.5,
+          "tara": 1.5,
+          "peso_liquido": 17.0,
+          "impureza_pct": 0.0,
+          "peso_faturado": 17.0,
+          "preco_unitario": 42.0,
+          "subtotal": 714.0
+        },
+        {
+          "material_id": "MT-ALU-01",
+          "material_nome": "Alumínio Perfil Limpo",
+          "peso_bruto": 42.8,
+          "tara": 2.8,
+          "peso_liquido": 40.0,
+          "impureza_pct": 2.0,
+          "peso_faturado": 39.2,
+          "preco_unitario": 11.5,
+          "subtotal": 450.8
+        }
+      ],
+      "peso_bruto_total": 61.3,
+      "tara_total": 4.3,
+      "peso_liquido_total": 56.2,
+      "valor_total": 1164.8,
+      "metodo_pagamento": "PIX",
+      "observacoes": "Lote entregue em carrinho manual. Pagamento liquidado instantaneamente na conta do parceiro."
+    }
+  ],
+  "produtos_balcao_conveniencia": [
+    {
+      "id": "PRD-BAL-01",
+      "nome": "Óleo 5W30 Sintético 1L Motor (Prateleira Balcão)",
+      "preco": 42.0,
+      "estoque": 24,
+      "local": "Gôndola Atrás do Balcão"
+    },
+    {
+      "id": "PRD-BAL-02",
+      "nome": "Fluido de Freio DOT 4 500ml",
+      "preco": 28.0,
+      "estoque": 18,
+      "local": "Gôndola Atrás do Balcão"
+    },
+    {
+      "id": "PRD-BAL-03",
+      "nome": "Desengripante Spray 300ml",
+      "preco": 19.5,
+      "estoque": 35,
+      "local": "Vitrine Inferior Balcão"
+    },
+    {
+      "id": "PRD-BAL-04",
+      "nome": "Aditivo Radiador Concentrado Orgânico 1L",
+      "preco": 32.0,
+      "estoque": 20,
+      "local": "Gôndola Atrás do Balcão"
+    }
+  ],
+  "sync_historico": [
+    {
+      "id": "SYNC-20260927203605",
+      "data_hora": "2026-09-27T20:36:05.854206",
+      "origem": "JSON API",
+      "itens_adicionados": 1,
+      "itens_atualizados": 0,
+      "status": "SUCESSO",
+      "mensagem": "Sincronização processada: 1 novos, 0 atualizados no inventário."
+    },
+    {
+      "id": "SYNC-20260927194643",
+      "data_hora": "2026-09-27T19:46:43.042869",
+      "origem": "Arquivo CSV",
+      "itens_adicionados": 2,
+      "itens_atualizados": 0,
+      "status": "SUCESSO",
+      "mensagem": "Sincronização processada: 2 novos, 0 atualizados no inventário."
+    }
+  ],
+  "empresa": {
+    "razao_social": "Ferro Velho do Paulinho LTDA",
+    "nome_fantasia": "Ferro Velho Paulinho",
+    "cnpj": "44.628.855/0001-37",
+    "ie": "07.982.114/001-20",
+    "situacao": "Ativa",
+    "porte": "ME",
+    "endereco": "Quadra Qn 425 Cj I Lt 1 - Samambaia Norte (Samambaia)",
+    "municipio": "Brasília",
+    "uf": "DF",
+    "cep": "72.327-509",
+    "cnae": "4530-7/04",
+    "cnae_descricao": "Comércio a varejo de peças e acessórios usados para veículos automotores",
+    "fundacao": "17/12/2021"
+  },
+  "notas_fiscais": [
+    {
+      "id": "NFCE-000849",
+      "numero": 849,
+      "serie": "001",
+      "modelo": "65",
+      "tipo_operacao": "SAIDA",
+      "natureza_operacao": "Venda a Consumidor Final (NFC-e Balcão)",
+      "chave_acesso": "53260944628855000137650010000008491149037615",
+      "protocolo_sefaz": "153260000849232526",
+      "data_emissao": "2026-09-27T23:25:26.829386",
+      "status": "AUTORIZADA",
+      "emitente": {
+        "razao_social": "FERRO VELHO DO PAULINHO LTDA",
+        "nome_fantasia": "Ferro Velho Paulinho",
+        "cnpj": "44.628.855/0001-37",
+        "ie": "07.982.114/001-20",
+        "cnae": "4530-7/04",
+        "endereco": "Quadra Qn 425 Cj I Lt 1 - Samambaia Norte (Samambaia)",
+        "cep": "72.327-509",
+        "municipio": "Brasília",
+        "uf": "DF"
+      },
+      "destinatario": {
+        "nome": "Consumidor Final (Balcão Presencial)",
+        "documento": "000.000.000-00",
+        "tipo_doc": "CPF",
+        "ie": "ISENTO",
+        "endereco": "Atendimento Frente de Caixa"
+      },
+      "itens": [
+        {
+          "codigo": "PC-2026-001",
+          "descricao": "Par Discos de Freio Ventilados VW Jetta TSI (OEM 1K0615301AA)",
+          "ncm": "8708.30.90",
+          "cfop": "5.102",
+          "cst_icms": "102",
+          "unidade": "PC",
+          "quantidade": 1,
+          "valor_unitario": 480,
+          "valor_total": 480,
+          "icms_diferido": false
+        }
+      ],
+      "totais": {
+        "valor_produtos": 480.0,
+        "base_icms": 0.0,
+        "valor_icms": 0.0,
+        "valor_frete": 0.0,
+        "valor_total": 480.0
+      },
+      "forma_pagamento": "PIX",
+      "observacoes_fiscais": "NFC-e emitida no PDV Balcão - Autopeças usadas CDV. Consulta pública via QR Code oficial SEFAZ SP.",
+      "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<nfeProc versao=\"4.00\" xmlns=\"http://www.portalfiscal.inf.br/nfe\">\n  <NFe>\n    <infNFe Id=\"NFe53260944628855000137650010000008491149037615\" versao=\"4.00\">\n      <ide>\n        <cUF>53</cUF>\n        <cNF>14903761</cNF>\n        <natOp>Venda a Consumidor Final (NFC-e Balcão)</natOp>\n        <mod>65</mod>\n        <serie>1</serie>\n        <nNF>849</nNF>\n        <dhEmi>2026-09-27T23:25:26.829386</dhEmi>\n        <tpNF>1</tpNF>\n        <idDest>1</idDest>\n        <cMunFG>5300108</cMunFG>\n        <tpImp>1</tpImp>\n        <tpEmis>1</tpEmis>\n        <cDV>5</cDV>\n        <tpAmb>1</tpAmb>\n        <finNFe>1</finNFe>\n      </ide>\n      <emit>\n        <CNPJ>44628855000137</CNPJ>\n        <xNome>FERRO VELHO DO PAULINHO LTDA</xNome>\n        <xFant>Ferro Velho Paulinho</xFant>\n        <IE>0798211400120</IE>\n        <CRT>1</CRT>\n        <CNAE>4530704</CNAE>\n      </emit>\n      <dest>\n        <CPF>00000000000</CPF>\n        <xNome>Consumidor Final (Balcão Presencial)</xNome>\n      </dest>\n      <total>\n        <ICMSTot>\n          <vBC>0.00</vBC>\n          <vICMS>0.00</vICMS>\n          <vProd>480.00</vProd>\n          <vNF>480.00</vNF>\n        </ICMSTot>\n      </total>\n    </infNFe>\n  </NFe>\n  <protNFe versao=\"4.00\">\n    <infProt>\n      <tpAmb>1</tpAmb>\n      <verAplic>SP_NFE_PL_009_V4</verAplic>\n      <chNFe>53260944628855000137650010000008491149037615</chNFe>\n      <dhRecbto>2026-09-27T23:25:26.829386</dhRecbto>\n      <nProt>153260000849232526</nProt>\n      <digVal>zFqA7vB6gY==</digVal>\n      <cStat>100</cStat>\n      <xMotivo>Autorizado o uso da NF-e</xMotivo>\n    </infProt>\n  </protNFe>\n</nfeProc>"
+    },
+    {
+      "id": "NFE-000848",
+      "numero": 848,
+      "serie": "001",
+      "modelo": "55",
+      "tipo_operacao": "SAIDA",
+      "natureza_operacao": "Venda de Autopeças Usadas (CNAE 4530-7/04)",
+      "chave_acesso": "53260944628855000137550010000008481394186482",
+      "protocolo_sefaz": "153260000848223617",
+      "data_emissao": "2026-09-27T22:36:17.693861",
+      "status": "AUTORIZADA",
+      "emitente": {
+        "razao_social": "FERRO VELHO DO PAULINHO LTDA",
+        "nome_fantasia": "Ferro Velho Paulinho",
+        "cnpj": "44.628.855/0001-37",
+        "ie": "07.982.114/001-20",
+        "cnae": "4530-7/04",
+        "endereco": "Quadra Qn 425 Cj I Lt 1 - Samambaia Norte (Samambaia)",
+        "cep": "72.327-509",
+        "municipio": "Brasília",
+        "uf": "DF"
+      },
+      "destinatario": {
+        "nome": "Auto Elétrica e Mecânica Taguatinga",
+        "documento": "04.123.456/0001-99",
+        "tipo_doc": "CNPJ",
+        "ie": "07.334.889/001-50",
+        "endereco": "QNF 12 Lote 4 - Taguatinga Norte, Brasília - DF"
+      },
+      "itens": [
+        {
+          "codigo": "PC-2026-001",
+          "descricao": "Par Discos de Freio Ventilados VW Jetta TSI",
+          "ncm": "8708.30.90",
+          "cfop": "5.102",
+          "cst_icms": "102",
+          "unidade": "PC",
+          "quantidade": 1,
+          "valor_unitario": 480.0,
+          "valor_total": 480.0,
+          "icms_diferido": false
+        }
+      ],
+      "totais": {
+        "valor_produtos": 480.0,
+        "base_icms": 480.0,
+        "valor_icms": 86.4,
+        "valor_frete": 0.0,
+        "valor_total": 480.0
+      },
+      "forma_pagamento": "PIX",
+      "observacoes_fiscais": "Mercadoria originária de desmanche credenciado Lei 12.977/2014. Tributação Simples Nacional ME.",
+      "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<nfeProc versao=\"4.00\" xmlns=\"http://www.portalfiscal.inf.br/nfe\">\n  <NFe>\n    <infNFe Id=\"NFe53260944628855000137550010000008481394186482\" versao=\"4.00\">\n      <ide>\n        <cUF>53</cUF>\n        <cNF>39418648</cNF>\n        <natOp>Venda de Autopeças Usadas (CNAE 4530-7/04)</natOp>\n        <mod>55</mod>\n        <serie>1</serie>\n        <nNF>848</nNF>\n        <dhEmi>2026-09-27T22:36:17.693861</dhEmi>\n        <tpNF>1</tpNF>\n        <idDest>1</idDest>\n        <cMunFG>5300108</cMunFG>\n        <tpImp>1</tpImp>\n        <tpEmis>1</tpEmis>\n        <cDV>2</cDV>\n        <tpAmb>1</tpAmb>\n        <finNFe>1</finNFe>\n      </ide>\n      <emit>\n        <CNPJ>44628855000137</CNPJ>\n        <xNome>FERRO VELHO DO PAULINHO LTDA</xNome>\n        <xFant>Ferro Velho Paulinho</xFant>\n        <IE>0798211400120</IE>\n        <CRT>1</CRT>\n        <CNAE>4530704</CNAE>\n      </emit>\n      <dest>\n        <CPF>04123456/000199</CPF>\n        <xNome>Auto Elétrica e Mecânica Taguatinga</xNome>\n      </dest>\n      <total>\n        <ICMSTot>\n          <vBC>480.00</vBC>\n          <vICMS>86.40</vICMS>\n          <vProd>480.00</vProd>\n          <vNF>480.00</vNF>\n        </ICMSTot>\n      </total>\n    </infNFe>\n  </NFe>\n  <protNFe versao=\"4.00\">\n    <infProt>\n      <tpAmb>1</tpAmb>\n      <verAplic>SP_NFE_PL_009_V4</verAplic>\n      <chNFe>53260944628855000137550010000008481394186482</chNFe>\n      <dhRecbto>2026-09-27T22:36:17.693861</dhRecbto>\n      <nProt>153260000848223617</nProt>\n      <digVal>zFqA7vB6gY==</digVal>\n      <cStat>100</cStat>\n      <xMotivo>Autorizado o uso da NF-e</xMotivo>\n    </infProt>\n  </protNFe>\n</nfeProc>"
+    },
+    {
+      "id": "NFE-000847",
+      "numero": 847,
+      "serie": "001",
+      "modelo": "55",
+      "tipo_operacao": "SAIDA",
+      "natureza_operacao": "Venda de Autopeças Usadas (Lei 12.977/2014)",
+      "chave_acesso": "53260944628855000137550010000008471715908906",
+      "protocolo_sefaz": "153260000847223233",
+      "data_emissao": "2026-09-27T22:32:33.446253",
+      "status": "AUTORIZADA",
+      "emitente": {
+        "razao_social": "Ferro Velho do Paulinho LTDA",
+        "nome_fantasia": "Ferro Velho Paulinho",
+        "cnpj": "44.628.855/0001-37",
+        "ie": "07.982.114/001-20",
+        "endereco": "Quadra Qn 425 Cj I Lt 1 - Samambaia Norte (Samambaia)",
+        "municipio": "Brasília",
+        "uf": "DF",
+        "cep": "72.327-509"
+      },
+      "destinatario": {
+        "nome": "Oficina Mecânica São Cristóvão",
+        "documento": "22.333.444/0001-55",
+        "tipo_doc": "CNPJ",
+        "ie": "112.334.556.789",
+        "endereco": "Av. Celso Garcia, 1200 - São Paulo - SP"
+      },
+      "itens": [
+        {
+          "codigo": "PC-2026-001",
+          "descricao": "Par Discos de Freio Ventilados VW Jetta TSI",
+          "ncm": "8708.30.90",
+          "cfop": "5.102",
+          "cst_icms": "102",
+          "unidade": "PC",
+          "quantidade": 2,
+          "valor_unitario": 480.0,
+          "valor_total": 960.0,
+          "icms_diferido": false
+        }
+      ],
+      "totais": {
+        "valor_produtos": 960.0,
+        "base_icms": 960.0,
+        "valor_icms": 172.8,
+        "valor_frete": 0.0,
+        "valor_total": 960.0
+      },
+      "forma_pagamento": "PIX",
+      "observacoes_fiscais": "Peça com rastreabilidade DETRAN",
+      "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<nfeProc versao=\"4.00\" xmlns=\"http://www.portalfiscal.inf.br/nfe\">\n  <NFe>\n    <infNFe Id=\"NFe35260918922381000140550010000008471715908900\" versao=\"4.00\">\n      <ide>\n        <cUF>35</cUF>\n        <cNF>71590890</cNF>\n        <natOp>Venda de Autopeças Usadas (Lei 12.977/2014)</natOp>\n        <mod>55</mod>\n        <serie>1</serie>\n        <nNF>847</nNF>\n        <dhEmi>2026-09-27T22:32:33.446253</dhEmi>\n        <tpNF>1</tpNF>\n        <idDest>1</idDest>\n        <cMunFG>3550308</cMunFG>\n        <tpImp>1</tpImp>\n        <tpEmis>1</tpEmis>\n        <cDV>0</cDV>\n        <tpAmb>1</tpAmb>\n        <finNFe>1</finNFe>\n      </ide>\n      <emit>\n        <CNPJ>18922381000140</CNPJ>\n        <xNome>PAULINHO RECICLAGEM E DESMANCHE LTDA</xNome>\n        <IE>149284912110</IE>\n        <CRT>1</CRT>\n      </emit>\n      <dest>\n        <CPF>22333444/000155</CPF>\n        <xNome>Oficina Mecânica São Cristóvão</xNome>\n      </dest>\n      <total>\n        <ICMSTot>\n          <vBC>960.00</vBC>\n          <vICMS>172.80</vICMS>\n          <vProd>960.00</vProd>\n          <vNF>960.00</vNF>\n        </ICMSTot>\n      </total>\n    </infNFe>\n  </NFe>\n  <protNFe versao=\"4.00\">\n    <infProt>\n      <tpAmb>1</tpAmb>\n      <verAplic>SP_NFE_PL_009_V4</verAplic>\n      <chNFe>35260918922381000140550010000008471715908900</chNFe>\n      <dhRecbto>2026-09-27T22:32:33.446253</dhRecbto>\n      <nProt>135260000847223233</nProt>\n      <digVal>zFqA7vB6gY==</digVal>\n      <cStat>100</cStat>\n      <xMotivo>Autorizado o uso da NF-e</xMotivo>\n    </infProt>\n  </protNFe>\n</nfeProc>"
+    },
+    {
+      "id": "NFCE-000846",
+      "numero": 846,
+      "serie": "001",
+      "modelo": "65",
+      "tipo_operacao": "SAIDA",
+      "natureza_operacao": "Venda a Consumidor Final (NFC-e Balcão)",
+      "chave_acesso": "35260918922381000140650010000008461229351128",
+      "protocolo_sefaz": "135260000846222951",
+      "data_emissao": "2026-09-27T22:29:51.977074",
+      "status": "AUTORIZADA",
+      "emitente": {
+        "razao_social": "PAULINHO RECICLAGEM E DESMANCHE LTDA",
+        "cnpj": "18.922.381/0001-40",
+        "ie": "149.284.912.110",
+        "municipio": "São Paulo",
+        "uf": "SP"
+      },
+      "destinatario": {
+        "nome": "Consumidor Final (Balcão Presencial)",
+        "documento": "987.654.321-11",
+        "tipo_doc": "CPF",
+        "ie": "ISENTO",
+        "endereco": "Atendimento Presencial no Balcão"
+      },
+      "itens": [
+        {
+          "codigo": "PC-2026-001",
+          "descricao": "Par Discos de Freio Ventilados VW Jetta TSI",
+          "ncm": "8708.30.90",
+          "cfop": "5.102",
+          "cst_icms": "102",
+          "unidade": "PC",
+          "quantidade": 1,
+          "valor_unitario": 480,
+          "valor_total": 480,
+          "icms_diferido": false
+        }
+      ],
+      "totais": {
+        "valor_produtos": 480.0,
+        "base_icms": 0.0,
+        "valor_icms": 0.0,
+        "valor_frete": 0.0,
+        "valor_total": 480.0
+      },
+      "forma_pagamento": "PIX",
+      "observacoes_fiscais": "NFC-e emitida nos termos do art. 212-O do RICMS/SP. Consulta pública via QR Code oficial da SEFAZ.",
+      "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<nfeProc versao=\"4.00\" xmlns=\"http://www.portalfiscal.inf.br/nfe\">\n  <NFe>\n    <infNFe Id=\"NFe35260918922381000140650010000008461229351128\" versao=\"4.00\">\n      <ide>\n        <cUF>35</cUF>\n        <cNF>22935112</cNF>\n        <natOp>Venda a Consumidor Final (NFC-e Balcão)</natOp>\n        <mod>65</mod>\n        <serie>1</serie>\n        <nNF>846</nNF>\n        <dhEmi>2026-09-27T22:29:51.977074</dhEmi>\n        <tpNF>1</tpNF>\n        <idDest>1</idDest>\n        <cMunFG>3550308</cMunFG>\n        <tpImp>1</tpImp>\n        <tpEmis>1</tpEmis>\n        <cDV>8</cDV>\n        <tpAmb>1</tpAmb>\n        <finNFe>1</finNFe>\n      </ide>\n      <emit>\n        <CNPJ>18922381000140</CNPJ>\n        <xNome>PAULINHO RECICLAGEM E DESMANCHE LTDA</xNome>\n        <IE>149284912110</IE>\n        <CRT>1</CRT>\n      </emit>\n      <dest>\n        <CPF>98765432111</CPF>\n        <xNome>Consumidor Final (Balcão Presencial)</xNome>\n      </dest>\n      <total>\n        <ICMSTot>\n          <vBC>0.00</vBC>\n          <vICMS>0.00</vICMS>\n          <vProd>480.00</vProd>\n          <vNF>480.00</vNF>\n        </ICMSTot>\n      </total>\n    </infNFe>\n  </NFe>\n  <protNFe versao=\"4.00\">\n    <infProt>\n      <tpAmb>1</tpAmb>\n      <verAplic>SP_NFE_PL_009_V4</verAplic>\n      <chNFe>35260918922381000140650010000008461229351128</chNFe>\n      <dhRecbto>2026-09-27T22:29:51.977074</dhRecbto>\n      <nProt>135260000846222951</nProt>\n      <digVal>zFqA7vB6gY==</digVal>\n      <cStat>100</cStat>\n      <xMotivo>Autorizado o uso da NF-e</xMotivo>\n    </infProt>\n  </protNFe>\n</nfeProc>"
+    },
+    {
+      "id": "NFE-000845",
+      "numero": 845,
+      "serie": "001",
+      "modelo": "55",
+      "tipo_operacao": "SAIDA",
+      "natureza_operacao": "Venda de Autopeças Usadas (Lei 12.977/2014)",
+      "chave_acesso": "35260918922381000140550010000008451571703792",
+      "protocolo_sefaz": "135260000845222907",
+      "data_emissao": "2026-09-27T22:29:07.909636",
+      "status": "AUTORIZADA",
+      "emitente": {
+        "razao_social": "PAULINHO RECICLAGEM E DESMANCHE LTDA",
+        "cnpj": "18.922.381/0001-40",
+        "ie": "149.284.912.110",
+        "municipio": "São Paulo",
+        "uf": "SP"
+      },
+      "destinatario": {
+        "nome": "Auto Mecânica São Jorge Ltda",
+        "documento": "14.283.910/0001-55",
+        "tipo_doc": "CNPJ",
+        "ie": "112.934.821.009",
+        "endereco": "Av. dos Bandeirantes, 3420 - Moema, São Paulo - SP"
+      },
+      "itens": [
+        {
+          "codigo": "PC-2026-001",
+          "descricao": "Par Discos de Freio Ventilados VW Jetta TSI (OEM 1K0615301AA)",
+          "ncm": "8708.30.90",
+          "cfop": "5.102",
+          "cst_icms": "102",
+          "unidade": "PC",
+          "quantidade": 1,
+          "valor_unitario": 480,
+          "valor_total": 480,
+          "icms_diferido": false
+        },
+        {
+          "codigo": "PC-2026-002",
+          "descricao": "Amortecedor Dianteiro Direito Golf TSI (OEM 5Q0413029)",
+          "ncm": "8708.80.00",
+          "cfop": "5.102",
+          "cst_icms": "102",
+          "unidade": "PC",
+          "quantidade": 1,
+          "valor_unitario": 290,
+          "valor_total": 290,
+          "icms_diferido": false
+        }
+      ],
+      "totais": {
+        "valor_produtos": 770.0,
+        "base_icms": 770.0,
+        "valor_icms": 138.6,
+        "valor_frete": 0.0,
+        "valor_total": 770.0
+      },
+      "forma_pagamento": "PIX",
+      "observacoes_fiscais": "Mercadoria originária de desmanche credenciado DETRAN/SP - Lei Federal 12.977/2014. Tributação pelo Simples Nacional.",
+      "xml": "<?xml version=\"1.0\" encoding=\"UTF-8\"?>\n<nfeProc versao=\"4.00\" xmlns=\"http://www.portalfiscal.inf.br/nfe\">\n  <NFe>\n    <infNFe Id=\"NFe35260918922381000140550010000008451571703792\" versao=\"4.00\">\n      <ide>\n        <cUF>35</cUF>\n        <cNF>57170379</cNF>\n        <natOp>Venda de Autopeças Usadas (Lei 12.977/2014)</natOp>\n        <mod>55</mod>\n        <serie>1</serie>\n        <nNF>845</nNF>\n        <dhEmi>2026-09-27T22:29:07.909636</dhEmi>\n        <tpNF>1</tpNF>\n        <idDest>1</idDest>\n        <cMunFG>3550308</cMunFG>\n        <tpImp>1</tpImp>\n        <tpEmis>1</tpEmis>\n        <cDV>2</cDV>\n        <tpAmb>1</tpAmb>\n        <finNFe>1</finNFe>\n      </ide>\n      <emit>\n        <CNPJ>18922381000140</CNPJ>\n        <xNome>PAULINHO RECICLAGEM E DESMANCHE LTDA</xNome>\n        <IE>149284912110</IE>\n        <CRT>1</CRT>\n      </emit>\n      <dest>\n        <CPF>14283910/000155</CPF>\n        <xNome>Auto Mecânica São Jorge Ltda</xNome>\n      </dest>\n      <total>\n        <ICMSTot>\n          <vBC>770.00</vBC>\n          <vICMS>138.60</vICMS>\n          <vProd>770.00</vProd>\n          <vNF>770.00</vNF>\n        </ICMSTot>\n      </total>\n    </infNFe>\n  </NFe>\n  <protNFe versao=\"4.00\">\n    <infProt>\n      <tpAmb>1</tpAmb>\n      <verAplic>SP_NFE_PL_009_V4</verAplic>\n      <chNFe>35260918922381000140550010000008451571703792</chNFe>\n      <dhRecbto>2026-09-27T22:29:07.909636</dhRecbto>\n      <nProt>135260000845222907</nProt>\n      <digVal>zFqA7vB6gY==</digVal>\n      <cStat>100</cStat>\n      <xMotivo>Autorizado o uso da NF-e</xMotivo>\n    </infProt>\n  </protNFe>\n</nfeProc>"
+    },
+    {
+      "id": "NFE-000842",
+      "numero": 842,
+      "serie": "001",
+      "modelo": "55",
+      "tipo_operacao": "SAIDA",
+      "natureza_operacao": "Venda de Autopeças Usadas (Lei 12.977/2014)",
+      "chave_acesso": "35260918922381000140550010000084211098124018",
+      "protocolo_sefaz": "135260981240184",
+      "data_emissao": "2026-09-27T17:42:10",
+      "status": "AUTORIZADA",
+      "emitente": {
+        "razao_social": "PAULINHO RECICLAGEM E DESMANCHE LTDA",
+        "cnpj": "18.922.381/0001-40",
+        "ie": "149.284.912.110",
+        "municipio": "São Paulo",
+        "uf": "SP"
+      },
+      "destinatario": {
+        "nome": "Auto Mecânica São Jorge Ltda",
+        "documento": "14.283.910/0001-55",
+        "tipo_doc": "CNPJ",
+        "ie": "112.934.821.009",
+        "endereco": "Av. dos Bandeirantes, 3420 - Moema, São Paulo - SP"
+      },
+      "itens": [
+        {
+          "codigo": "PC-2026-001",
+          "descricao": "Par Discos de Freio Ventilados VW Jetta TSI (OEM 1K0615301AA)",
+          "ncm": "8708.30.90",
+          "cfop": "5.102",
+          "cst_icms": "102",
+          "quantidade": 1,
+          "unidade": "PC",
+          "valor_unitario": 480.0,
+          "valor_total": 480.0,
+          "icms_diferido": false
+        },
+        {
+          "codigo": "PC-2026-002",
+          "descricao": "Amortecedor Dianteiro Direito Golf TSI (OEM 5Q0413029)",
+          "ncm": "8708.80.00",
+          "cfop": "5.102",
+          "cst_icms": "102",
+          "quantidade": 1,
+          "unidade": "PC",
+          "valor_unitario": 290.0,
+          "valor_total": 290.0,
+          "icms_diferido": false
+        }
+      ],
+      "totais": {
+        "valor_produtos": 770.0,
+        "base_icms": 0.0,
+        "valor_icms": 0.0,
+        "valor_frete": 0.0,
+        "valor_total": 770.0
+      },
+      "forma_pagamento": "PIX",
+      "observacoes_fiscais": "Mercadoria originária de desmanche credenciado DETRAN/SP - Lei Federal 12.977/2014. Tributação pelo Simples Nacional."
+    },
+    {
+      "id": "NFE-000841",
+      "numero": 841,
+      "serie": "001",
+      "modelo": "55",
+      "tipo_operacao": "ENTRADA",
+      "natureza_operacao": "Compra de Sucata Metálica de Pessoa Física",
+      "chave_acesso": "35260918922381000140550010000084111098124017",
+      "protocolo_sefaz": "135260981240173",
+      "data_emissao": "2026-09-27T15:30:00",
+      "status": "AUTORIZADA",
+      "emitente": {
+        "razao_social": "PAULINHO RECICLAGEM E DESMANCHE LTDA",
+        "cnpj": "18.922.381/0001-40",
+        "ie": "149.284.912.110",
+        "municipio": "São Paulo",
+        "uf": "SP"
+      },
+      "destinatario": {
+        "nome": "Sebastião Ferreira da Silva (Fornecedor PF)",
+        "documento": "123.456.789-00",
+        "tipo_doc": "CPF",
+        "ie": "ISENTO",
+        "endereco": "Rua das Rosas, 102 - Vila Maria, São Paulo - SP"
+      },
+      "itens": [
+        {
+          "codigo": "MT-ALU-02",
+          "descricao": "Sucata de Alumínio Estamparia / Chaparia",
+          "ncm": "7602.00.00",
+          "cfop": "1.101",
+          "cst_icms": "51",
+          "quantidade": 145.0,
+          "unidade": "KG",
+          "valor_unitario": 9.2,
+          "valor_total": 1334.0,
+          "icms_diferido": true
+        }
+      ],
+      "totais": {
+        "valor_produtos": 1334.0,
+        "base_icms": 1334.0,
+        "valor_icms": 0.0,
+        "valor_frete": 0.0,
+        "valor_total": 1334.0
+      },
+      "forma_pagamento": "PIX",
+      "observacoes_fiscais": "ICMS DIFERIDO CONFORME ARTIGO 392 DO RICMS/SP (DECRETO 45.490/2000). AUTO-EMISSÃO DE ENTRADA OBRIGATÓRIA."
+    }
+  ],
+  "clientes": [
+    {
+      "id": "CLI-001",
+      "nome": "Rodrigo Alencar Silva",
+      "tipo": "Pessoa Física",
+      "cpf_cnpj": "042.891.431-88",
+      "telefone": "(61) 98451-9022",
+      "whatsapp": "5561984519022",
+      "email": "rodrigo.alencar@gmail.com",
+      "cidade": "Brasília - DF (SIA Trecho 3)",
+      "veiculo": {
+        "modelo": "Volkswagen Jetta TSI 2.0 16V",
+        "placa": "ABC-4D12",
+        "ano": 2018,
+        "km_atual": 114500,
+        "cor": "Branco Cristal"
+      },
+      "total_gasto": 3150.0,
+      "qtd_servicos": 3,
+      "data_cadastro": "2025-11-10",
+      "ultima_visita": "2026-08-15",
+      "proximo_retorno_previsto": "2026-10-05",
+      "alerta_recall": "Revisão e sangria preventiva de freios (6 meses)",
+      "retorno_status": "ATENCAO"
+    },
+    {
+      "id": "CLI-002",
+      "nome": "Auto Mecânica & Funilaria São Jorge Ltda",
+      "tipo": "Oficina Credenciada",
+      "cpf_cnpj": "14.283.910/0001-55",
+      "telefone": "(61) 3352-8800",
+      "whatsapp": "5561991234567",
+      "email": "contato@mecanicasaojorge.com.br",
+      "cidade": "Taguatinga Sul - DF",
+      "veiculo": {
+        "modelo": "Frotas Diversas / Oficinas",
+        "placa": "BRA-2E19",
+        "ano": 2021,
+        "km_atual": 85000,
+        "cor": "Prata"
+      },
+      "total_gasto": 18400.0,
+      "qtd_servicos": 14,
+      "data_cadastro": "2025-06-20",
+      "ultima_visita": "2026-09-24",
+      "proximo_retorno_previsto": "2026-10-10",
+      "alerta_recall": "Lote de alternadores e motores de arranque testados",
+      "retorno_status": "EM_DIA"
+    },
+    {
+      "id": "CLI-003",
+      "nome": "Carlos Eduardo Mendes",
+      "tipo": "Pessoa Física",
+      "cpf_cnpj": "781.420.911-30",
+      "telefone": "(61) 98112-4090",
+      "whatsapp": "5561981124090",
+      "email": "carlos.mendes.ti@outlook.com",
+      "cidade": "Ceilândia Norte - DF",
+      "veiculo": {
+        "modelo": "Golf TSI 1.4 Highline",
+        "placa": "GHI-2K33",
+        "ano": 2017,
+        "km_atual": 98200,
+        "cor": "Azul Noturno"
+      },
+      "total_gasto": 1840.0,
+      "qtd_servicos": 2,
+      "data_cadastro": "2026-01-14",
+      "ultima_visita": "2026-07-20",
+      "proximo_retorno_previsto": "2026-09-28",
+      "alerta_recall": "Inspeção preventiva e reaperto de suspensão (60 dias)",
+      "retorno_status": "URGENTE_HOJE"
+    },
+    {
+      "id": "CLI-004",
+      "nome": "Transportadora & Guinchos Planalto Eireli",
+      "tipo": "Frota Pesada",
+      "cpf_cnpj": "28.910.450/0001-92",
+      "telefone": "(61) 3465-1122",
+      "whatsapp": "5561998776655",
+      "email": "logistica@guinchosplanalto.com.br",
+      "cidade": "Vicente Pires - DF",
+      "veiculo": {
+        "modelo": "Ford Cargo 1119 / Iveco Daily",
+        "placa": "JHR-5520",
+        "ano": 2019,
+        "km_atual": 210000,
+        "cor": "Branco"
+      },
+      "total_gasto": 12950.0,
+      "qtd_servicos": 8,
+      "data_cadastro": "2025-08-01",
+      "ultima_visita": "2026-09-02",
+      "proximo_retorno_previsto": "2026-10-15",
+      "alerta_recall": "Revisão periódica de baterias pesadas e alternador 180A",
+      "retorno_status": "EM_DIA"
+    },
+    {
+      "id": "CLI-005",
+      "nome": "Juliana Fontenele Bastos",
+      "tipo": "Pessoa Física",
+      "cpf_cnpj": "639.102.841-09",
+      "telefone": "(61) 99654-3210",
+      "whatsapp": "5561996543210",
+      "email": "ju.fontenele@advocacia.df.br",
+      "cidade": "Asa Norte - DF",
+      "veiculo": {
+        "modelo": "Jeep Compass Longitude Turbo",
+        "placa": "FGH-8J90",
+        "ano": 2021,
+        "km_atual": 42000,
+        "cor": "Preto Carbon"
+      },
+      "total_gasto": 4700.0,
+      "qtd_servicos": 3,
+      "data_cadastro": "2026-02-18",
+      "ultima_visita": "2026-09-10",
+      "proximo_retorno_previsto": "2026-11-10",
+      "alerta_recall": "Verificação de alinhamento e geometria 5.000 km",
+      "retorno_status": "EM_DIA"
+    }
+  ],
+  "ordens_servico": [
+    {
+      "id": "OS-2026-1041",
+      "cliente_id": "CLI-001",
+      "cliente_nome": "Rodrigo Alencar Silva",
+      "telefone": "(61) 98451-9022",
+      "whatsapp": "5561984519022",
+      "veiculo_resumo": "VW Jetta TSI 2.0 (Placa ABC-4D12)",
+      "km_veiculo": 114200,
+      "data_abertura": "2026-08-15",
+      "data_conclusao": "2026-08-15",
+      "status": "CONCLUIDO",
+      "itens_pecas": [
+        {
+          "id": "PC-2026-001",
+          "descricao": "Par Discos de Freio Ventilados Dianteiros 312mm OEM 1K0615301AA",
+          "origem": "EST-01 (Freios) N2-P04",
+          "qtd": 1,
+          "valor_unitario": 480.0,
+          "valor_total": 480.0
+        }
+      ],
+      "itens_servicos": [
+        {
+          "descricao": "Mão de Obra: Instalação e teste dos discos no elevador 01",
+          "horas": 1.5,
+          "valor_total": 150.0
+        },
+        {
+          "descricao": "Sangria de Fluído de Freio DOT 4 e regulagem das pinças",
+          "horas": 0.5,
+          "valor_total": 90.0
+        }
+      ],
+      "valor_pecas": 480.0,
+      "valor_servicos": 240.0,
+      "valor_total": 720.0,
+      "desconto": 20.0,
+      "valor_liquido": 700.0,
+      "forma_pagamento": "PIX (À Vista)",
+      "garantia_dias": 90,
+      "observacoes": "Peças com laudo de teste e selo DETRAN. Cliente satisfeito com a economia de 65% em relação à peça nova.",
+      "proximo_retorno": "2026-10-05",
+      "motivo_retorno": "Inspeção preventiva gratuita de assentamento dos discos (6 meses ou 10.000 km)"
+    },
+    {
+      "id": "OS-2026-1042",
+      "cliente_id": "CLI-003",
+      "cliente_nome": "Carlos Eduardo Mendes",
+      "telefone": "(61) 98112-4090",
+      "whatsapp": "5561981124090",
+      "veiculo_resumo": "Golf TSI 1.4 Highline (Placa GHI-2K33)",
+      "km_veiculo": 98200,
+      "data_abertura": "2026-07-20",
+      "data_conclusao": "2026-07-20",
+      "status": "CONCLUIDO",
+      "itens_pecas": [
+        {
+          "id": "PC-2026-002",
+          "descricao": "Par de Amortecedores Dianteiros Golf TSI OEM 5Q0413029",
+          "origem": "EST-02 (Suspensão) N3-P02",
+          "qtd": 1,
+          "valor_unitario": 580.0,
+          "valor_total": 580.0
+        },
+        {
+          "id": "PC-2026-018",
+          "descricao": "Kit Coxins e Batentes Originais Recondicionados",
+          "origem": "EST-02 N1-P05",
+          "qtd": 1,
+          "valor_unitario": 180.0,
+          "valor_total": 180.0
+        }
+      ],
+      "itens_servicos": [
+        {
+          "descricao": "Mão de Obra: Troca de amortecedores na Baia 1",
+          "horas": 2.0,
+          "valor_total": 220.0
+        },
+        {
+          "descricao": "Alinhamento a laser e teste de rodagem",
+          "horas": 0.8,
+          "valor_total": 80.0
+        }
+      ],
+      "valor_pecas": 760.0,
+      "valor_servicos": 300.0,
+      "valor_total": 1060.0,
+      "desconto": 0.0,
+      "valor_liquido": 1060.0,
+      "forma_pagamento": "Cartão Crédito 3x",
+      "garantia_dias": 90,
+      "observacoes": "Suspensão dianteira montada com calibração esportiva.",
+      "proximo_retorno": "2026-09-28",
+      "motivo_retorno": "Reaperto geral da suspensão e alinhamento cortesia (60 dias) - RETORNO HOJE!"
+    },
+    {
+      "id": "OS-2026-1043",
+      "cliente_id": "CLI-002",
+      "cliente_nome": "Auto Mecânica & Funilaria São Jorge Ltda",
+      "telefone": "(61) 3352-8800",
+      "whatsapp": "5561991234567",
+      "veiculo_resumo": "Jeep Compass Longitude (Placa BRA-2E19)",
+      "km_veiculo": 85000,
+      "data_abertura": "2026-09-27",
+      "data_conclusao": null,
+      "status": "EM_ANDAMENTO",
+      "itens_pecas": [
+        {
+          "id": "PC-2026-003",
+          "descricao": "Alternador Bosch 140A Original Jeep/TSI OEM 06J903023C",
+          "origem": "EST-07 (Elétrica) N2-P04",
+          "qtd": 1,
+          "valor_unitario": 750.0,
+          "valor_total": 750.0
+        },
+        {
+          "id": "PC-2026-037",
+          "descricao": "Polia Roda Livre INA Original 6 Estrias",
+          "origem": "EST-07 N4-CX02",
+          "qtd": 1,
+          "valor_unitario": 130.0,
+          "valor_total": 130.0
+        }
+      ],
+      "itens_servicos": [
+        {
+          "descricao": "Substituição do alternador e teste de carga no osciloscópio (14.2V)",
+          "horas": 2.0,
+          "valor_total": 260.0
+        }
+      ],
+      "valor_pecas": 880.0,
+      "valor_servicos": 260.0,
+      "valor_total": 1140.0,
+      "desconto": 0.0,
+      "valor_liquido": 1140.0,
+      "forma_pagamento": "Faturado 15 Dias",
+      "garantia_dias": 90,
+      "observacoes": "Veículo no elevador da Baia 1. Montagem final e testes às 17h.",
+      "proximo_retorno": "2026-12-27",
+      "motivo_retorno": "Inspeção de carga e integridade da bateria (90 dias)"
+    },
+    {
+      "id": "OS-2026-1044",
+      "cliente_id": "CLI-005",
+      "cliente_nome": "Juliana Fontenele Bastos",
+      "telefone": "(61) 99654-3210",
+      "whatsapp": "5561996543210",
+      "veiculo_resumo": "Jeep Compass Longitude (Placa FGH-8J90)",
+      "km_veiculo": 42000,
+      "data_abertura": "2026-09-26",
+      "data_conclusao": null,
+      "status": "ORCAMENTO",
+      "itens_pecas": [
+        {
+          "id": "PC-2026-032",
+          "descricao": "Farol Dianteiro Direito Máscara Negra Full LED Original",
+          "origem": "EST-06 N1-P03",
+          "qtd": 1,
+          "valor_unitario": 1150.0,
+          "valor_total": 1150.0
+        },
+        {
+          "id": "PC-2026-035",
+          "descricao": "Grade Dianteira Superior Modelo Colmeia com Friso",
+          "origem": "EST-06 N1-P06",
+          "qtd": 1,
+          "valor_unitario": 290.0,
+          "valor_total": 290.0
+        }
+      ],
+      "itens_servicos": [
+        {
+          "descricao": "Funilaria leve e alinhamento de para-choque dianteiro",
+          "horas": 2.5,
+          "valor_total": 350.0
+        }
+      ],
+      "valor_pecas": 1440.0,
+      "valor_servicos": 350.0,
+      "valor_total": 1790.0,
+      "desconto": 90.0,
+      "valor_liquido": 1700.0,
+      "forma_pagamento": "A definir (PIX / Cartão)",
+      "garantia_dias": 90,
+      "observacoes": "Aguardando aprovação do cliente via WhatsApp.",
+      "proximo_retorno": "2026-11-10",
+      "motivo_retorno": "Pós-revisão de carroceria e alinhamento"
+    }
+  ],
+  "contas_financeiro": [
+    {
+      "id": "CP-001",
+      "tipo": "PAGAR",
+      "categoria": "Insumos Operacionais",
+      "descricao": "Gás Oxigênio e Acetileno Industrial (Corte de Chassis Baia 2)",
+      "favorecido_cliente": "Oxigênio & Gases Brasília Ltda",
+      "valor": 1450.0,
+      "data_vencimento": "2026-09-30",
+      "data_pagamento": null,
+      "status": "PENDENTE",
+      "centro_custo": "Pátio Desmanche",
+      "impacto_gargalo": "ALTO",
+      "alerta_vazamento": "Consumo 38% acima da média por desgaste no bico do maçarico"
+    },
+    {
+      "id": "CP-002",
+      "tipo": "PAGAR",
+      "categoria": "Custos Fixos",
+      "descricao": "Energia Elétrica Trifásica Prensa & Elevadores (Neoenergia DF)",
+      "favorecido_cliente": "Neoenergia Distribuição Brasília",
+      "valor": 2180.4,
+      "data_vencimento": "2026-10-05",
+      "data_pagamento": null,
+      "status": "PENDENTE",
+      "centro_custo": "Infraestrutura Pátio",
+      "impacto_gargalo": "NORMAL",
+      "alerta_vazamento": null
+    },
+    {
+      "id": "CP-003",
+      "tipo": "PAGAR",
+      "categoria": "Aquisição de Sucata",
+      "descricao": "Lote 600kg Alumínio Estamparia & Baterias (Romaneio 842)",
+      "favorecido_cliente": "Sebastião da Silva (Tião da Carreta)",
+      "valor": 3820.0,
+      "data_vencimento": "2026-09-28",
+      "data_pagamento": null,
+      "status": "PENDENTE",
+      "centro_custo": "Balança Comercial",
+      "impacto_gargalo": "NORMAL",
+      "alerta_vazamento": null
+    },
+    {
+      "id": "CP-004",
+      "tipo": "PAGAR",
+      "categoria": "Logística & Caçambas",
+      "descricao": "Frete 2 Caçambas Roll-On para Transporte de Lataria Siderúrgica",
+      "favorecido_cliente": "Trans-Entulho & Caçambas Planalto",
+      "valor": 850.0,
+      "data_vencimento": "2026-09-25",
+      "data_pagamento": null,
+      "status": "VENCIDO",
+      "centro_custo": "Logística e Fretes",
+      "impacto_gargalo": "MEDIO",
+      "alerta_vazamento": "Vencido há 2 dias. Risco de multa e juros de mora (+R$ 42,50)"
+    },
+    {
+      "id": "CP-005",
+      "tipo": "PAGAR",
+      "categoria": "Folha & Pessoal",
+      "descricao": "Adiantamento Quinzenal dos Operadores de Pátio e Mecânicos",
+      "favorecido_cliente": "Equipe de Pátio (4 colaboradores)",
+      "valor": 4500.0,
+      "data_vencimento": "2026-10-05",
+      "data_pagamento": null,
+      "status": "PENDENTE",
+      "centro_custo": "Operacional",
+      "impacto_gargalo": "NORMAL",
+      "alerta_vazamento": null
+    },
+    {
+      "id": "CP-006",
+      "tipo": "PAGAR",
+      "categoria": "Tributos & Fiscal",
+      "descricao": "Guia DAS Simples Nacional (Apuração 08/2026)",
+      "favorecido_cliente": "Receita Federal do Brasil / SEFAZ-DF",
+      "valor": 1840.0,
+      "data_vencimento": "2026-09-20",
+      "data_pagamento": "2026-09-19",
+      "status": "PAGO",
+      "centro_custo": "Fiscal & Tributário",
+      "impacto_gargalo": "NORMAL",
+      "alerta_vazamento": null
+    },
+    {
+      "id": "CR-001",
+      "tipo": "RECEBER",
+      "categoria": "Venda de Metais Nobres",
+      "descricao": "Fatura Lote 850kg Cobre Mel Limpo 1ª Linha (NF-e 001248)",
+      "favorecido_cliente": "Fundição & Laminação Paulistana Ltda",
+      "valor": 36125.0,
+      "data_vencimento": "2026-10-05",
+      "data_pagamento": null,
+      "status": "A_RECEBER",
+      "centro_custo": "Balança / Fundição",
+      "impacto_gargalo": "POSITIVO",
+      "alerta_vazamento": "Liquidação garantida via DDA bancário"
+    },
+    {
+      "id": "CR-002",
+      "tipo": "RECEBER",
+      "categoria": "Venda de Peças B2B",
+      "descricao": "Faturamento Quinzenal de Autopeças (4 alternadores + 2 suspensões)",
+      "favorecido_cliente": "Auto Mecânica & Funilaria São Jorge Ltda",
+      "valor": 5480.0,
+      "data_vencimento": "2026-09-30",
+      "data_pagamento": null,
+      "status": "A_RECEBER",
+      "centro_custo": "Estoque CDV",
+      "impacto_gargalo": "POSITIVO",
+      "alerta_vazamento": null
+    },
+    {
+      "id": "CR-003",
+      "tipo": "RECEBER",
+      "categoria": "Ordem de Serviço Oficina",
+      "descricao": "OS-2026-1043 Alternador Jeep Compass (Instalação e Teste)",
+      "favorecido_cliente": "Auto Mecânica & Funilaria São Jorge Ltda",
+      "valor": 1140.0,
+      "data_vencimento": "2026-09-27",
+      "data_pagamento": null,
+      "status": "PENDENTE_ENTREGA",
+      "centro_custo": "Oficina e Instalação",
+      "impacto_gargalo": "POSITIVO",
+      "alerta_vazamento": "Veículo em finalização na Baia 1"
+    },
+    {
+      "id": "CR-004",
+      "tipo": "RECEBER",
+      "categoria": "Venda de Sucata Pesada",
+      "descricao": "Lote 15 Toneladas Chaparia e Vigas Pesadas (Contrato Gerdau)",
+      "favorecido_cliente": "Gerdau Aços Longos S/A",
+      "valor": 18200.0,
+      "data_vencimento": "2026-10-15",
+      "data_pagamento": null,
+      "status": "A_RECEBER",
+      "centro_custo": "Pátio de Sucata",
+      "impacto_gargalo": "POSITIVO",
+      "alerta_vazamento": null
+    },
+    {
+      "id": "CR-005",
+      "tipo": "RECEBER",
+      "categoria": "Venda Balcão PDV",
+      "descricao": "Venda Balcão Presencial Peças de Freio e Suspensão",
+      "favorecido_cliente": "Clientes Balcão Frente de Caixa",
+      "valor": 1840.0,
+      "data_vencimento": "2026-09-26",
+      "data_pagamento": "2026-09-26",
+      "status": "RECEBIDO",
+      "centro_custo": "PDV Balcão",
+      "impacto_gargalo": "POSITIVO",
+      "alerta_vazamento": null
+    }
+  ],
+  "diagnostico_financeiro": {
+    "centros_lucro": [
+      {
+        "nome": "Autopeças Usadas do Desmanche (CDV)",
+        "receita": 38450.0,
+        "custo": 13800.0,
+        "lucro": 24650.0,
+        "margem_pct": 64.1,
+        "status": "CAMPEAO_LUCRO",
+        "descricao": "Motores, câmbios, faróis e freios comprados em leilões/baixas DETRAN com altíssima margem de valor agregado."
+      },
+      {
+        "nome": "Serviços de Oficina & Instalação no Pátio",
+        "receita": 8920.0,
+        "custo": 1950.0,
+        "lucro": 6970.0,
+        "margem_pct": 78.1,
+        "status": "ALTA_MARGEM",
+        "descricao": "Instalação de peças, sangria de freio, alinhamento e drenagem. Quase 100% margem de mão de obra pura."
+      },
+      {
+        "nome": "Metais Nobres (Cobre Mel, Alumínio e Latão)",
+        "receita": 42405.0,
+        "custo": 36125.0,
+        "lucro": 6280.0,
+        "margem_pct": 14.8,
+        "status": "ALTO_GIRO",
+        "descricao": "Volume financeiro massivo, liquidez em 24h a 48h com fundições parceiras, proteção de caixa."
+      },
+      {
+        "nome": "Sucata Pesada & Chaparia (Gerdau)",
+        "receita": 18200.0,
+        "custo": 13250.0,
+        "lucro": 4950.0,
+        "margem_pct": 27.2,
+        "status": "ESTAVEL",
+        "descricao": "Volume bruto em toneladas. Limpeza de pátio e sustentabilidade ambiental."
+      }
+    ],
+    "vazamentos_dinheiro": [
+      {
+        "id": "VAZ-01",
+        "titulo": "Consumo Desregulado de Oxigênio & Acetileno",
+        "perda_mensal": 1450.0,
+        "severidade": "ALTA",
+        "setor": "Pátio de Corte (Baia 2)",
+        "causa": "Bico de corte número 4 com desgaste interno de orifício, gerando fluxo turbulento e vazamento contínuo de gás.",
+        "solucao_recomendada": "Substituição imediata do bico do maçarico (investimento de R$ 45) gera economia líquida de R$ 1.405/mês."
+      },
+      {
+        "id": "VAZ-02",
+        "titulo": "Oxidação de Chaparia e Lataria Exposta à Chuva",
+        "perda_mensal": 820.0,
+        "severidade": "MEDIA",
+        "setor": "Pátio Sul (Estamparia)",
+        "causa": "Latarias estocadas ao ar livre sem lona impermeável. A ferrugem rebaixa a classificação na siderúrgica de R$ 1,25/kg para R$ 0,85/kg.",
+        "solucao_recomendada": "Cobrir a pilha com lona vinílica impermeável com custo de R$ 180 recuperado na primeira carga vendida."
+      },
+      {
+        "id": "VAZ-03",
+        "titulo": "Juros e Multas por Boletos Pagos Após o Vencimento",
+        "perda_mensal": 340.0,
+        "severidade": "MEDIA",
+        "setor": "Administrativo / Financeiro",
+        "causa": "Boletos de frete e insumos pagos com 2 a 5 dias de atraso por falta de alarme unificado no fluxo de caixa.",
+        "solucao_recomendada": "Ativar o lembrete DDA no módulo de Contas a Pagar e programar liquidação automática."
+      },
+      {
+        "id": "VAZ-04",
+        "titulo": "Capital Imobilizado em Peças Paradas > 180 Dias",
+        "perda_mensal": 650.0,
+        "severidade": "BAIXA",
+        "setor": "Estantes EST-03 e EST-05",
+        "causa": "R$ 3.800 em peças de veículos obsoletos ocupando gavetas nobres e gerando custo de oportunidade.",
+        "solucao_recomendada": "Realizar saldão promocional com 40% de desconto ou destinar carcaças para reciclagem de alumínio na balança."
+      }
+    ]
+  }
+}

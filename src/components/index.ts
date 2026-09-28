@@ -1,0 +1,21 @@
+export { ExecutiveDashboardPage as DashboardExecutivo } from '../pages/dashboard/ExecutiveDashboardPage';
+export { FloorplanPage as PlantaBaixa, FloorplanPage as PlantaBaixaInterativa } from '../pages/dashboard/FloorplanPage';
+export { ProtocoloDescontaminacao, ProtocoloDescontaminacao as ProtocoloDescontaminação } from './ProtocoloDescontaminacao';
+export { ScaleWeighingPage as BalancaRecepcao } from '../pages/yard/ScaleWeighingPage';
+export { PatioDesmonte } from './PatioDesmonte';
+export { VehiclesDetranPage as InventarioVeiculos } from '../pages/yard/VehiclesDetranPage';
+export { ShelvesWarehousePage as PrateleirasEstoque } from '../pages/inventory/ShelvesWarehousePage';
+export { CatalogoPecas } from './CatalogoPecas';
+export { PosTerminalPage as PDVBalcao } from '../pages/commercial/PosTerminalPage';
+export { WholesaleSalesPage as VendasAtacado } from '../pages/commercial/WholesaleSalesPage';
+export { CashFlowPage as FluxoCaixa } from '../pages/financial/CashFlowPage';
+export { PartnerSplitsPage as DivisaoSocios } from '../pages/financial/PartnerSplitsPage';
+export { SpreadsheetSyncPage as SyncPlanilhas } from '../pages/integrations/SpreadsheetSyncPage';
+export { SefazSuitePage as SuiteFiscal } from '../pages/fiscal/SefazSuitePage';
+export { SplitPaneLayout } from './layout/SplitPaneLayout';
+export { MasterDetailLayout } from './layout/MasterDetailLayout';
+export { Sidebar } from './layout/Sidebar';
+export { TopNavbar } from './layout/TopNavbar';
+export { BarcodeListener, BarcodeListenerProvider, useBarcodeScanner } from './common/BarcodeListener';
+export { SyncEngine, SyncEngineProvider, useSyncEngine } from './common/SyncEngine';
+
